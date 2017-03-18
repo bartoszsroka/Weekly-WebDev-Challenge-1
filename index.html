@@ -2,19 +2,34 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title of the document</title>
+    <title>Weekly Web Development Challenge 1</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-<section class="register-form">
-    <h2>Register Form</h2>
-    <form>
-        <label><input type="text" required placeholder="Username"/></label>
-        <label><input type="password" required placeholder="Password"/></label>
-        <label><input type="password" required placeholder="Confirm Password"/></label>
-        <label><input type="email" required placeholder="Email"/></label>
-        <label>
+<h2>Register Form</h2>
+<section class="form-section">
+    <form class="form-container">
+        <label class="input-container">
+            <img class="input-icon" src="images/user-icon.png" alt="icon_user" />
+            <input type="text" required placeholder="Username"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/password-icon.png" alt="icon_password" />
+            <input type="password" required placeholder="Password"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/password-icon.png" alt="icon_password" />
+            <input type="password" required placeholder="Confirm Password"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/email-icon.png" alt="icon_email" />
+            <input type="email" required placeholder="Email"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/location-icon.png" alt="icon_location" />
             <select required>
                 <option value="" disabled selected>Your Location</option>
                 <option>USA</option>
@@ -22,7 +37,7 @@
                 <option>Russia</option>
             </select>
         </label>
-        <label>
+        <label class="checkbox-container">
             <input type="checkbox" checked>
             I have read and accept the terms of use.
         </label>
@@ -30,13 +45,21 @@
     </form>
 </section>
 
-<section class="send-email-form">
-    <h2>Send Email</h2>
-    <form>
-        <label><input type="text" required placeholder="Your Name"/></label>
-        <label><input type="email" required placeholder="Your Email"/></label>
-        <label><textarea required placeholder="Type your message..."></textarea></label>
-        <label>
+<h2>Send Email</h2>
+<section class="form-section">
+    <form class="form-container">
+        <label class="input-container">
+            <img class="input-icon" src="images/user-icon.png" alt="icon_user" />
+            <input type="text" required placeholder="Your Name"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/email-icon.png" alt="icon_email" />
+            <input type="email" required placeholder="Your Email"/>
+        </label>
+       <!-- <label class="input-container">-->
+        <textarea class="input-container" required placeholder="Type your message..."></textarea>
+      <!--  </label>-->
+        <label class="checkbox-container">
             <input type="checkbox" checked>
             Send a copy to my Email
         </label>
@@ -44,31 +67,47 @@
     </form>
 </section>
 
-<section class="sign-in-form">
-    <h2>Sign In Form</h2>
-    <form>
-        <label><input type="text" required placeholder="Username"/></label>
-        <label><input type="password" required placeholder="Password"/></label>
-        <label>
+<h2>Sign In Form</h2>
+<section class="form-section">
+    <form class="form-container">
+        <label class="input-container">
+            <img class="input-icon" src="images/user-icon.png" alt="icon_user" />
+            <input type="text" required placeholder="Username"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/password-icon.png" alt="icon_password" />
+            <input type="password" required placeholder="Password"/></label>
+        <label class="checkbox-container">
             <input type="checkbox" checked>
             Remember me
         </label>
         <input type="submit" value="Sign in">
     </form>
 </section>
-<section class="recover-form">
-    <h2>Recover Form</h2>
-    <form>
-        <label><input type="email" required placeholder="Enter your Email"/></label>
-        <label><input type="number" required placeholder="Enter your Phone number"/></label>
+
+<h2>Recover Form</h2>
+<section class="form-section">
+    <form class="form-container">
+        <label class="input-container">
+            <img class="input-icon" src="images/email-icon.png" alt="icon_email" />
+            <input type="email" required placeholder="Enter your Email"/>
+        </label>
+        <label class="input-container">
+            <img class="input-icon" src="images/phone-icon.png" alt="icon_phone" />
+            <input type="text" required placeholder="Enter your Phone number"/>
+        </label>
         <input type="submit" value="Send">
         <input type="reset" value="Done">
     </form>
 </section>
-<section class="subscribe-form">
-    <h2>Subscribe Form</h2>
-    <form>
-        <label><input type="email" required placeholder="Enter your Email"/></label>
+
+<h2>Subscribe Form</h2>
+<section class="form-section">
+    <form class="form-container">
+        <label class="input-container">
+            <img class="input-icon" src="images/email-icon.png" alt="icon_email" />
+            <input type="email" required placeholder="Enter your Email"/>
+        </label>
         <input type="submit" value="Subscribe">
         <input type="reset" value="No, Thanks">
     </form>
