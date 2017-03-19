@@ -1,0 +1,68 @@
+.sprite {
+    background-image: url('../images/spritesheet.png');
+    background-repeat: no-repeat;
+    display: block;
+    opacity: 0.2;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.sprite-arrow-down-icon {
+    width: 17px;
+    height: 10px;
+    background-position: -5px -5px;
+}
+
+.sprite-checkbox-checked-icon {
+    width: 13px;
+    height: 13px;
+    background-position: -32px -5px;
+}
+
+.sprite-company-name {
+    width: 293px;
+    height: 78px;
+    background-position: -5px -28px;
+}
+
+.sprite-email-icon {
+    width: 26px;
+    height: 16px;
+    background-position: -4px -116px;
+}
+
+.sprite-location-icon {
+    width: 26px;
+    height: 24px;
+    background-position: -34px -116px;
+}
+
+.sprite-logo {
+    width: 112px;
+    height: 111px;
+    background-position: -64px -116px;
+}
+
+.sprite-password-icon {
+    width: 26px;
+    height: 26px;
+    background-position: -185px -116px;
+}
+
+.sprite-phone-icon {
+    width: 26px;
+    height: 26px;
+    background-position: -211px -116px;
+}
+
+.sprite-user-icon {
+    width: 26px;
+    height: 22px;
+    background-position: -242px -116px;
+}
+
+.sprite-web-page {
+    width: 246px;
+    height: 18px;
+    background-position: -308px -5px;
+}
