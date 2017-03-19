@@ -11,6 +11,9 @@
     width: 17px;
     height: 10px;
     background-position: -5px -5px;
+    position: absolute;
+    left: 340px;
+    opacity: 1;
 }
 
 .sprite-checkbox-checked-icon {
