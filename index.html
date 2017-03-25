@@ -11,114 +11,134 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/sprites.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
     <script src="scripts/form.js"></script>
 </head>
 
 <body>
 
-<h2>Register Form</h2>
-<section class="form-section">
-    <form class="form-container">
-        <label class="input-container">
-            <i class="sprite sprite-user-icon"></i>
-            <input type="text" required placeholder="Username"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-password-icon"></i>
-            <input type="password" required placeholder="Password"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-password-icon"></i>
-            <input type="password" required placeholder="Confirm Password"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-email-icon"></i>
-            <input type="email" required placeholder="Email"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-location-icon"></i>
-            <i class="sprite sprite-arrow-down-icon"></i>
-            <select required>
-                <option value="" disabled selected>Your Location</option>
-                <option>USA</option>
-                <option>Poland</option>
-                <option>Russia</option>
-            </select>
-        </label>
-        <label class="checkbox-container">
-            <input type="checkbox" checked>
-            I have read and accept the terms of use.
-        </label>
-        <input type="submit" value="Sign up">
-    </form>
+<section class="container-section">
+    <h2>Register Form</h2>
+    <div class="form-wrapper">
+        <form class="form">
+            <label class="input-container">
+                <i class="sprite sprite-user-icon"></i>
+                <input type="text" required placeholder="Username"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-password-icon"></i>
+                <input type="password" required placeholder="Password"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-password-icon"></i>
+                <input type="password" required placeholder="Confirm Password"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-email-icon"></i>
+                <input type="email" required placeholder="Email"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-location-icon"></i>
+                <i class="sprite sprite-arrow-down-icon"></i>
+                <select required>
+                    <option value="" disabled selected>Your Location</option>
+                    <option>USA</option>
+                    <option>Poland</option>
+                    <option>Russia</option>
+                </select>
+            </label>
+            <input id="accept-register-terms" type="checkbox" checked>
+            <label for="accept-register-terms" class="checkbox-container">
+                I have read and accept the terms of use.
+            </label>
+            <span>
+                <input type="submit" class="button button-submit button-large" value="Sign up">
+            </span>
+        </form>
+    </div>
 </section>
 
-<h2>Send Email</h2>
-<section class="form-section">
-    <form class="form-container">
-        <label class="input-container">
-            <i class="sprite sprite-user-icon"></i>
-            <input type="text" required placeholder="Your Name"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-email-icon"></i>
-            <input type="email" required placeholder="Your Email"/>
-        </label>
-        <textarea class="input-container" required placeholder="Type your message..."></textarea>
-        <label class="checkbox-container">
-            <input type="checkbox" checked>
-            Send a copy to my Email
-        </label>
-        <input type="submit" value="Send Email">
-    </form>
+<section class="container-section">
+    <h2>Send Email</h2>
+    <div class="form-wrapper">
+        <form class="form">
+            <label class="input-container">
+                <i class="sprite sprite-user-icon"></i>
+                <input type="text" required placeholder="Your Name"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-email-icon"></i>
+                <input type="email" required placeholder="Your Email"/>
+            </label>
+            <textarea class="input-container" required placeholder="Type your message..."></textarea>
+            <input id="send-copy" type="checkbox" checked>
+            <label for="send-copy" class="checkbox-container">
+                Send a copy to my Email
+            </label>
+            <span>
+                <input type="submit" class="button button-submit button-large" value="Send Email">
+            </span>
+        </form>
+    </div>
 </section>
 
-<h2>Sign In Form</h2>
-<section class="form-section">
-    <form class="form-container">
-        <label class="input-container">
-            <i class="sprite sprite-user-icon"></i>
-            <input type="text" required placeholder="Username"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-password-icon"></i>
-            <input type="password" required placeholder="Password"/></label>
-        <label class="checkbox-container">
-            <input type="checkbox" checked>
-            Remember me
-        </label>
-        <input type="submit" value="Sign in">
-    </form>
+<section class="container-section">
+    <h2>Sign In Form</h2>
+    <div class="form-wrapper">
+        <form class="form">
+            <label class="input-container">
+                <i class="sprite sprite-user-icon"></i>
+                <input type="text" required placeholder="Username"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-password-icon"></i>
+                <input type="password" required placeholder="Password"/></label>
+            <input id="remember-me" type="checkbox" checked>
+            <label for="remember-me" class="checkbox-container">
+                Remember me
+            </label>
+            <span>
+                <input type="submit" class="button button-submit button-large" value="Sign in">
+            </span>
+        </form>
+    </div>
 </section>
 
-<h2>Recover Form</h2>
-<section class="form-section">
-    <form class="form-container">
-        <label class="input-container">
-            <i class="sprite sprite-email-icon"></i>
-            <input type="email" required placeholder="Enter your Email"/>
-        </label>
-        <label class="input-container">
-            <i class="sprite sprite-phone-icon"></i>
-            <input type="text" required placeholder="Enter your Phone number"/>
-        </label>
-        <input type="submit" value="Send">
-        <input type="reset" value="Done">
-    </form>
+<section class="container-section">
+    <h2>Recover Form</h2>
+    <div class="form-wrapper">
+        <form class="form">
+            <label class="input-container">
+                <i class="sprite sprite-email-icon"></i>
+                <input type="email" required placeholder="Enter your Email"/>
+            </label>
+            <label class="input-container">
+                <i class="sprite sprite-phone-icon"></i>
+                <input type="text" required placeholder="Enter your Phone number"/>
+            </label>
+            <span>
+                <input type="submit" class="button button-submit button-small" value="Send">
+                <input type="reset" class="button button-reset-secondary button-small" value="Done">
+            </span>
+        </form>
+    </div>
 </section>
 
-<h2>Subscribe Form</h2>
-<section class="form-section">
-    <form class="form-container">
-        <label class="input-container">
-            <i class="sprite sprite-email-icon"></i>
-            <input type="email" required placeholder="Enter your Email"/>
-        </label>
-        <input type="submit" value="Subscribe">
-        <input type="reset" value="No, Thanks">
-    </form>
+<section class="container-section">
+    <h2>Subscribe Form</h2>
+    <div class="form-wrapper">
+        <form class="form">
+            <label class="input-container">
+                <i class="sprite sprite-email-icon"></i>
+                <input type="email" required placeholder="Enter your Email"/>
+            </label>
+            <span>
+                <input type="submit" class="button button-submit button-small" value="Subscribe">
+                <input type="reset" class="button button-reset button-small" value="No, Thanks">
+            </span>
+        </form>
+    </div>
 </section>
 </body>
-
 </html>

@@ -4,27 +4,47 @@ body {
     background-size: 100% 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    color: #AFAFAF;
 }
 
-.form-section  {
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.6em;
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 3px rgba(30, 30, 30, 0.8);
+}
+
+.container-section {
+    width: 420px;
+}
+
+.form-wrapper  {
     background-color: rgba(7, 7, 7, 0.231);
-    width: 380px;
+    width: 420px;
+    box-sizing: border-box;
     margin-top: 5px;
     padding: 20px;
 }
 
-.form-container  {
-     background-color: #F8F8F8;
-     width: 336px;
-     padding: 22px;
+.form  {
+    background-color: #F8F8F8;
+    width: 336px;
+    padding: 22px;
 }
 
-.checkbox-container {
+.checkbox-container, .input-container {
     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
 }
 
 .input-container {
-    display: flex;
     padding: 5px;
     box-sizing: border-box;
     margin: 0;
@@ -49,9 +69,7 @@ textarea.input-container {
     padding-left: 23px;
 }
 
-.form-section, .form-container, .input-container {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
+.form-wrapper, .form, .input-container, .button {
     border-radius: 4px;
 }
 
@@ -68,11 +86,82 @@ select, textarea {
     padding-left: 23px;
     background-color: transparent;
     height: 30px;
+    color: #AFAFAF;
 }
 
 select {
     width: 100%;
-    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none
 }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label.checkbox-container:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(195, 195, 195, 0.8);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.74902) 0px -20px 43px -40px inset;
+    margin: 0 10px 0 0 ;
+    position: relative;
+    top: -3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label.checkbox-container:before {
+    background-image: url('../images/spritesheet.png');
+    background-position: -27px 0px;
+}
+
+.button {
+    cursor: pointer;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #FFFFFF;
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    height: 46px;
+    text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.8);
+}
+
+.button:hover {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.button-submit {
+    border: solid 1px #3B9A00;
+    background: -webkit-linear-gradient(bottom, #80C420 31%, #A0D63C 77%);
+    background: linear-gradient(0deg, #80C420 31%, #A0D63C 77%);
+}
+
+.button-reset {
+    border: solid 1px #A4202A;
+    background: -webkit-linear-gradient(bottom, #F13A4A 31%, #F65E70 77%);
+    background: linear-gradient(0deg, #F13A4A 31%, #F65E70 77%);
+}
+
+.button-reset-secondary {
+    border: solid 1px #90CA6D;
+    background: -webkit-linear-gradient(bottom, #ACD182 31%, #C5E0A4 77%);
+    background: linear-gradient(0deg, #ACD182 31%, #C0E0A4 77%);
+}
+
+.button-large {
+    width: 100%;
+}
+
+.button-small {
+    width: 40%;
+    display: inline-block;
+}
+
+.button-small:nth-child(2) {
+    float: right;
+}
+
