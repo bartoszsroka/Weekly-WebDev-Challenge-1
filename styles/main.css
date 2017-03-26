@@ -70,6 +70,8 @@ textarea.input-container {
 }
 
 .form-wrapper, .form, .input-container, .button {
+    -webkit-border-radius: 4pxpx;
+    -moz-border-radius: 4pxpx;
     border-radius: 4px;
 }
 
@@ -164,4 +166,3 @@ input[type="checkbox"]:checked + label.checkbox-container:before {
 .button-small:nth-child(2) {
     float: right;
 }
-
