@@ -12,7 +12,8 @@
     height: 10px;
     background-position: -5px -5px;
     position: absolute;
-    left: 340px;
+    right: 10px;
+    top: 15px;
     opacity: 1;
 }
 

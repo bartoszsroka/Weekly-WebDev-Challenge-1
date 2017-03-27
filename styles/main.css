@@ -1,3 +1,15 @@
+html {
+   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+   -webkit-box-sizing: inherit;
+   -moz-box-sizing: inherit;
+   box-sizing: inherit;
+}
+
 body {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
@@ -25,15 +37,14 @@ h2 {
 
 .form-wrapper  {
     background-color: rgba(7, 7, 7, 0.231);
-    width: 420px;
-    box-sizing: border-box;
+    width: 415px;
     margin-top: 5px;
     padding: 20px;
 }
 
 .form  {
     background-color: #F8F8F8;
-    width: 336px;
+    width: 370px;
     padding: 22px;
 }
 
@@ -46,11 +57,11 @@ h2 {
 
 .input-container {
     padding: 5px;
-    box-sizing: border-box;
     margin: 0;
     margin-bottom: 10px;
     border: 1px solid rgba(195, 195, 195, 0.8);
     box-shadow: inset 0px -20px 43px -40px rgba(0,0,0,0.75);
+    position: relative;
 }
 
 .input-container.input-container-focused {
@@ -67,6 +78,7 @@ textarea.input-container {
     height: 100px;
     padding-top: 10px;
     padding-left: 23px;
+    overflow: auto;
 }
 
 .form-wrapper, .form, .input-container, .button {
@@ -79,7 +91,6 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select, textarea {
-    box-sizing: border-box;
     border: none;
     border-left: 1px solid rgba(195, 195, 195, 0.8);
     background-color: #F8F8F8;
@@ -89,6 +100,7 @@ select, textarea {
     background-color: transparent;
     height: 30px;
     color: #AFAFAF;
+    width: 100%;
 }
 
 select {
@@ -111,8 +123,8 @@ input[type="checkbox"] + label.checkbox-container:before {
     margin: 0 10px 0 0 ;
     position: relative;
     top: -3px;
-    box-sizing: border-box;
     cursor: pointer;
+    display: block;
 }
 
 input[type="checkbox"]:checked + label.checkbox-container:before {
