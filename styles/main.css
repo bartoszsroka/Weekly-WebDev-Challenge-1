@@ -1,3 +1,5 @@
+/* TODO: Styling using css classes only*/
+
 html {
    -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -107,6 +109,10 @@ select {
     width: 100%;
     -moz-appearance: none;
     -webkit-appearance: none
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 input[type="checkbox"] {
