@@ -14,7 +14,7 @@ gulp.task('clean', function() {
     return del([buildDir]);
 });
 
-const stylesStream = gulp.src([/*'./styles/reset.css', */'./styles/sprites.css', './styles/main.css'])
+const stylesStream = gulp.src(['./styles/reset.css', './styles/sprites.css', './styles/main.css'])
     .pipe(concat('styles.min.css'))
     .pipe(cssmin())
 
