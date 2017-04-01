@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Web Development Challenge 1</title>
 
     <script src="http://code.jquery.com/jquery-3.2.0.min.js"
@@ -16,30 +17,35 @@
 </head>
 
 <body>
+<header>
+    <a href="http://masterlab.com" target="_blank">
+        <i class="logo sprite sprite-logo-top"></i>
+    </a>
+</header>
 
 <section class="container-section">
     <h2>Register Form</h2>
     <div class="form-wrapper">
         <form class="form">
             <label class="input-container">
-                <i class="sprite sprite-user-icon"></i>
+                <i class="sprite sprite-username"></i>
                 <input type="text" required placeholder="Username"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-password-icon"></i>
+                <i class="sprite sprite-password"></i>
                 <input type="password" required placeholder="Password"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-password-icon"></i>
+                <i class="sprite sprite-password"></i>
                 <input type="password" required placeholder="Confirm Password"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-email-icon"></i>
+                <i class="sprite sprite-email"></i>
                 <input type="email" required placeholder="Email"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-location-icon"></i>
-                <i class="sprite sprite-arrow-down-icon"></i>
+                <i class="sprite sprite-location"></i>
+                <i class="sprite sprite-arrow"></i>
                 <select required>
                     <option value="" disabled selected>Your Location</option>
                     <option>USA</option>
@@ -63,11 +69,11 @@
     <div class="form-wrapper">
         <form class="form">
             <label class="input-container">
-                <i class="sprite sprite-user-icon"></i>
+                <i class="sprite sprite-username"></i>
                 <input type="text" required placeholder="Your Name"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-email-icon"></i>
+                <i class="sprite sprite-email"></i>
                 <input type="email" required placeholder="Your Email"/>
             </label>
             <textarea class="input-container" required placeholder="Type your message..."></textarea>
@@ -87,11 +93,11 @@
     <div class="form-wrapper">
         <form class="form">
             <label class="input-container">
-                <i class="sprite sprite-user-icon"></i>
+                <i class="sprite sprite-username"></i>
                 <input type="text" required placeholder="Username"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-password-icon"></i>
+                <i class="sprite sprite-password"></i>
                 <input type="password" required placeholder="Password"/></label>
             <input id="remember-me" type="checkbox" checked>
             <label for="remember-me" class="checkbox-container">
@@ -109,11 +115,11 @@
     <div class="form-wrapper">
         <form class="form">
             <label class="input-container">
-                <i class="sprite sprite-email-icon"></i>
+                <i class="sprite sprite-email"></i>
                 <input type="email" required placeholder="Enter your Email"/>
             </label>
             <label class="input-container">
-                <i class="sprite sprite-phone-icon"></i>
+                <i class="sprite sprite-phone"></i>
                 <input type="text" required placeholder="Enter your Phone number"/>
             </label>
             <span>
@@ -129,7 +135,7 @@
     <div class="form-wrapper">
         <form class="form">
             <label class="input-container">
-                <i class="sprite sprite-email-icon"></i>
+                <i class="sprite sprite-email"></i>
                 <input type="email" required placeholder="Enter your Email"/>
             </label>
             <span>
@@ -139,5 +145,11 @@
         </form>
     </div>
 </section>
+
+<footer>
+    <a href="http://masterlab.com" target="_blank">
+        <i class="logo sprite sprite-logo-bottom"></i>
+    </a>
+</footer>
 </body>
 </html>

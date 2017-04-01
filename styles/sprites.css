@@ -2,14 +2,12 @@
     background-image: url('../images/spritesheet.png');
     background-repeat: no-repeat;
     display: block;
-    opacity: 0.2;
-    align-self: center;
-    margin-left: 10px;
+    margin: 2px 0 0 10px;
 }
 
-.sprite-arrow-down-icon {
-    width: 17px;
-    height: 10px;
+.sprite-arrow {
+    width: 16px;
+    height: 8px;
     background-position: -5px -5px;
     position: absolute;
     right: 10px;
@@ -17,56 +15,50 @@
     opacity: 1;
 }
 
-.sprite-checkbox-checked-icon {
+.sprite-checkbox {
     width: 13px;
-    height: 13px;
-    background-position: -32px -5px;
+    height: 14px;
+    background-position: -31px -5px;
 }
 
-.sprite-company-name {
-    width: 293px;
-    height: 78px;
-    background-position: -5px -28px;
-}
-
-.sprite-email-icon {
-    width: 30px;
-    height: 16px;
-    background-position: -4px -116px;
-}
-
-.sprite-location-icon {
-    width: 28px;
-    height: 24px;
-    background-position: -34px -116px;
-}
-
-.sprite-logo {
-    width: 112px;
-    height: 111px;
-    background-position: -64px -116px;
-}
-
-.sprite-password-icon {
+.sprite-email {
     width: 28px;
     height: 26px;
-    background-position: -185px -116px;
+    background-position: -54px -5px;
 }
 
-.sprite-phone-icon {
+.sprite-location {
     width: 28px;
     height: 26px;
-    background-position: -211px -116px;
+    background-position: -88px -5px;
 }
 
-.sprite-user-icon {
+.sprite-logo-bottom {
+    width: 353px;
+    height: 130px;
+    background-position: -5px -41px;
+}
+
+.sprite-logo-top {
+    width: 434px;
+    height: 116px;
+    background-position: -5px -181px;
+}
+
+.sprite-password {
     width: 28px;
-    height: 22px;
-    background-position: -242px -116px;
+    height: 26px;
+    background-position: -122px -5px;
 }
 
-.sprite-web-page {
-    width: 246px;
-    height: 18px;
-    background-position: -308px -5px;
+.sprite-phone {
+    width: 28px;
+    height: 26px;
+    background-position: -156px -5px;
+}
+
+.sprite-username {
+    width: 28px;
+    height: 26px;
+    background-position: -190px -5px;
 }
