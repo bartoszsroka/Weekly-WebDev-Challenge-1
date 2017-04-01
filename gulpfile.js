@@ -14,21 +14,17 @@ gulp.task('clean', function() {
     return del([buildDir]);
 });
 
-const stylesStream = gulp.src(['./styles/reset.css', './styles/sprites.css', './styles/main.css'])
-    .pipe(concat('styles.min.css'))
-    .pipe(cssmin())
-
 gulp.task('build-css', ['clean'], function() {
-    return stylesStream
+    return gulp.src(['styles/reset.css', 'styles/sprites.css', 'styles/main.css'])
+        .pipe(concat('styles.min.css'))
+        .pipe(cssmin())
         .pipe(gulp.dest(buildDir + '/styles'));
-});
-
-const jsStream = gulp.src('./scripts/*.js')
-    .pipe(concat('scripts.min.js'))
-    .pipe(uglify());
+   });
 
 gulp.task('build-js', ['clean'], function() {
-    return jsStream
+    return gulp.src('scripts/*.js')
+        .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
         .pipe(gulp.dest(buildDir + '/scripts'));
 });
 
@@ -48,26 +44,32 @@ gulp.task('copy-images', ['clean'], function() {
         .pipe(gulp.dest(buildDir + '/images'));
 });
 
-// TODO: Try make relative paths without transform function
 gulp.task('copy-html', ['clean'], function() {
+    return gulp.src('index.html')
+        .pipe(gulp.dest(buildDir));
+});
+
+gulp.task('inject-html', ['copy-html', 'build-css', 'build-js', 'copy-images'], function() {
     var options = {
-        transform: function(filepath) {
-            var relativePath = filepath.substring(7);
-            if (filepath.slice(-4) === '.css') {
-                return '<link rel="stylesheet" href="' + relativePath + '">';
-            }
+        relative: true,
+        removeTags: true,
+        transform: function (filepath, file, i, length) {
             if (filepath.slice(-3) === '.js') {
-                return '<script src="' + relativePath + '"></script>';
+                return '<script src="' + filepath + '" defer></script>';
             }
             return inject.transform.apply(inject.transform, arguments);
         }
-    }
-    return gulp.src('./index.html')
-        .pipe(inject(es.merge(jsStream, stylesStream), options))
+    };
+
+    var jsStream = gulp.src(buildDir + '/scripts/scripts.min.js');
+    var cssStream = gulp.src(buildDir + '/styles/styles.min.css');
+
+    return gulp.src(buildDir + '/index.html')
+        .pipe(inject(es.merge(jsStream, cssStream), options))
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
         .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('default', ['build-css', 'build-js', 'copy-images', 'copy-html']);
+gulp.task('default', ['inject-html']);
