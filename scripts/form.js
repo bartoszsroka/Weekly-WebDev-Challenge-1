@@ -1,19 +1,19 @@
 $(document).ready(
     function(){
         function containerCssClass(){
-            return ".input-container";
+            return ".b-form-item";
         };
 
         function containerFocusedCssClass(){
-            return "input-container-focused"
+            return "b-form-item--focused"
         };
 
         function containerHoveredCssClass(){
-            return "input-container-hovered"
+            return "b-form-item--hovered"
         };
 
         function formComponentsSelector(){
-            return "input, select, textarea";
+            return ".b-form-input, .b-form-input--multiline";
         };
 
         var addClassFunction = function(cssClass){

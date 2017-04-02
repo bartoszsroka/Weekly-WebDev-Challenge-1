@@ -19,129 +19,139 @@
 <body>
 <header>
     <a href="http://masterlab.com" target="_blank">
-        <i class="b-logo sprite sprite-logo-top"></i>
+        <i class="b-logo b-sprite b-sprite--logo-top"></i>
     </a>
 </header>
 
-<section class="container-section">
+<section class="b-section">
     <h2 class="b-heading">Register Form</h2>
-    <div class="form-wrapper">
-        <form class="form">
-            <label class="input-container">
-                <i class="sprite sprite-username"></i>
-                <input type="text" required placeholder="Username"/>
+    <div class="b-form-container">
+        <form class="b-form">
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--username"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Username"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-password"></i>
-                <input type="password" required placeholder="Password"/>
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--password"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="password" required
+                       placeholder="Password"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-password"></i>
-                <input type="password" required placeholder="Confirm Password"/>
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--password"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="password" required
+                       placeholder="Confirm Password"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-email"></i>
-                <input type="email" required placeholder="Email"/>
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--email"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Email"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-location"></i>
-                <i class="sprite sprite-arrow"></i>
-                <select required>
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--location"></i>
+                <i class="b-sprite b-sprite--arrow"></i>
+                <select class="b-form-input b-form-input--no-border b-form-input--multi-option b--transparent" required>
                     <option value="" disabled selected>Your Location</option>
                     <option>USA</option>
                     <option>Poland</option>
                     <option>Russia</option>
                 </select>
             </label>
-            <input id="accept-register-terms" type="checkbox" checked>
-            <label for="accept-register-terms" class="checkbox-container">
+            <input id="accept-register-terms" type="checkbox" class="b-form-input b-form-input--check" checked>
+            <label for="accept-register-terms" class="b--flexible">
                 I have read and accept the terms of use.
             </label>
             <span>
-                <input type="submit" class="button button--submit button--size-big" value="Sign up">
+                <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign up">
             </span>
         </form>
     </div>
 </section>
 
-<section class="container-section">
+<section class="b-section">
     <h2 class="b-heading">Send Email</h2>
-    <div class="form-wrapper">
-        <form class="form">
-            <label class="input-container">
-                <i class="sprite sprite-username"></i>
-                <input type="text" required placeholder="Your Name"/>
+    <div class="b-form-container">
+        <form class="b-form">
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--username"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Your Name"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-email"></i>
-                <input type="email" required placeholder="Your Email"/>
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--email"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required
+                       placeholder="Your Email"/>
             </label>
-            <textarea class="input-container" required placeholder="Type your message..."></textarea>
-            <input id="send-copy" type="checkbox" checked>
-            <label for="send-copy" class="checkbox-container">
+            <textarea class="b-form-item b-form-input b-form-input--multiline b--rounded b--transparent b--shadowed" required
+                      placeholder="Type your message..."></textarea>
+            <input id="send-copy" type="checkbox" class="b-form-input b-form-input--check" checked>
+            <label for="send-copy"  class="b--flexible">
                 Send a copy to my Email
             </label>
             <span>
-                <input type="submit" class="button button--submit button--size-big" value="Send Email">
+                <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Send Email">
             </span>
         </form>
     </div>
 </section>
 
-<section class="container-section">
+<section class="b-section">
     <h2 class="b-heading">Sign In Form</h2>
-    <div class="form-wrapper">
-        <form class="form">
-            <label class="input-container">
-                <i class="sprite sprite-username"></i>
-                <input type="text" required placeholder="Username"/>
+    <div class="b-form-container">
+        <form class="b-form">
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--username"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Username"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-password"></i>
-                <input type="password" required placeholder="Password"/></label>
-            <input id="remember-me" type="checkbox" checked>
-            <label for="remember-me" class="checkbox-container">
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--password"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="password" required
+                       placeholder="Password"/></label>
+            <input id="remember-me" type="checkbox" class="b-form-input b-form-input--check" checked>
+            <label for="remember-me"  class="b--flexible">
                 Remember me
             </label>
             <span>
-                <input type="submit" class="button button--submit button--size-big" value="Sign in">
+                <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign in">
             </span>
         </form>
     </div>
 </section>
 
-<section class="container-section">
+<section class="b-section">
     <h2 class="b-heading">Recover Form</h2>
-    <div class="form-wrapper">
-        <form class="form">
-            <label class="input-container">
-                <i class="sprite sprite-email"></i>
-                <input type="email" required placeholder="Enter your Email"/>
+    <div class="b-form-container">
+        <form class="b-form">
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--email"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required
+                       placeholder="Enter your Email"/>
             </label>
-            <label class="input-container">
-                <i class="sprite sprite-phone"></i>
-                <input type="text" required placeholder="Enter your Phone number"/>
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--phone"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required
+                       placeholder="Enter your Phone number"/>
             </label>
             <span>
-                <input type="submit" class="button button--submit button--size-small" value="Send">
-                <input type="reset" class="button button--reset button--reset-secondary button--size-small button--disabled"
+                <input type="submit" class="b-button b-button--submit b-button--size-small b--rounded" value="Send">
+                <input type="reset"
+                       class="b-button b-button--reset b-button--reset-secondary b-button--size-small b-button--disabled b--rounded"
                        value="Done">
             </span>
         </form>
     </div>
 </section>
 
-<section class="container-section">
+<section class="b-section">
     <h2 class="b-heading">Subscribe Form</h2>
-    <div class="form-wrapper">
-        <form class="form">
-            <label class="input-container">
-                <i class="sprite sprite-email"></i>
-                <input type="email" required placeholder="Enter your Email"/>
+    <div class="b-form-container">
+        <form class="b-form">
+            <label class="b-form-item b--rounded b--shadowed b--flexible">
+                <i class="b-sprite b-sprite--email"></i>
+                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required
+                       placeholder="Enter your Email"/>
             </label>
             <span>
-                <input type="submit" class="button button--submit button--size-small" value="Subscribe">
-                <input type="reset" class="button button--reset button--reset-primary button--size-small" value="No, Thanks">
+                <input type="submit" class="b-button b-button--submit b-button--size-small b--rounded" value="Subscribe">
+                <input type="reset" class="b-button b-button--reset b-button--reset-primary b-button--size-small b--rounded"
+                       value="No, Thanks">
             </span>
         </form>
     </div>
@@ -149,7 +159,7 @@
 
 <footer>
     <a href="http://masterlab.com" target="_blank">
-        <i class="b-logo sprite sprite-logo-bottom"></i>
+        <i class="b-logo b-sprite b-sprite--logo-bottom"></i>
     </a>
 </footer>
 </body>

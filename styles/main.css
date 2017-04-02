@@ -2,12 +2,16 @@ html {
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
+   font-family: 'Titillium Web', sans-serif;
+   color: #AFAFAF;
 }
 
 *, *:before, *:after {
    -webkit-box-sizing: inherit;
    -moz-box-sizing: inherit;
    box-sizing: inherit;
+   font-family: inherit;
+   color: inherit;
 }
 
 body {
@@ -16,9 +20,7 @@ body {
     background-size: 100% 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Titillium Web', sans-serif;
     font-size: 1em;
-    color: #AFAFAF;
 }
 
 .b-heading {
@@ -29,4 +31,10 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 2px 3px 3px rgba(30, 30, 30, 0.8);
+}
+
+.b--rounded {
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }

@@ -1,12 +1,12 @@
 /*TODO: Refactor*/
-.sprite {
+.b-sprite {
     background-image: url('../images/spritesheet.png');
     background-repeat: no-repeat;
     display: block;
     margin: 2px 0 0 10px;
 }
 
-.sprite-arrow {
+.b-sprite--arrow {
     width: 16px;
     height: 8px;
     background-position: -5px -5px;
@@ -16,49 +16,49 @@
     opacity: 1;
 }
 
-.sprite-checkbox {
+.b-sprite--checkbox {
     width: 13px;
     height: 14px;
     background-position: -31px -5px;
 }
 
-.sprite-email {
+.b-sprite--email {
     width: 28px;
     height: 26px;
     background-position: -54px -5px;
 }
 
-.sprite-location {
+.b-sprite--location {
     width: 28px;
     height: 26px;
     background-position: -88px -5px;
 }
 
-.sprite-logo-bottom {
+.b-sprite--logo-bottom {
     width: 353px;
     height: 130px;
     background-position: -5px -41px;
 }
 
-.sprite-logo-top {
+.b-sprite--logo-top {
     width: 434px;
     height: 116px;
     background-position: -5px -181px;
 }
 
-.sprite-password {
+.b-sprite--password {
     width: 28px;
     height: 26px;
     background-position: -122px -5px;
 }
 
-.sprite-phone {
+.b-sprite--phone {
     width: 28px;
     height: 26px;
     background-position: -156px -5px;
 }
 
-.sprite-username {
+.b-sprite--username {
     width: 28px;
     height: 26px;
     background-position: -190px -5px;
