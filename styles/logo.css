@@ -1,0 +1,7 @@
+.b-logo {
+ 	opacity: 0.2;
+}
+
+.b-logo:hover {
+ 	opacity: 1;
+}
