@@ -15,7 +15,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build-css', ['clean'], function() {
-    return gulp.src(['styles/reset.css', 'styles/sprites.css', 'styles/main.css'])
+    return gulp.src(['styles/reset.css', 'styles/sprites.css', 'styles/buttons.css', 'styles/main.css'])
         .pipe(concat('styles.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest(buildDir + '/styles'));
