@@ -5,3 +5,9 @@
 .b-logo:hover {
  	opacity: 1;
 }
+
+.b-logo--animated {
+	transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+}
