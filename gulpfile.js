@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin');
 const inject = require('gulp-inject');
 const es = require('event-stream')
 
-const buildDir = "./build";
+const buildDir = "./docs";
 
 gulp.task('clean', function() {
     return del([buildDir]);
