@@ -22,7 +22,7 @@ gulp.task('build-css', ['clean'], function() {
    });
 
 gulp.task('build-js', ['clean'], function() {
-    return gulp.src('scripts/*.js')
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'scripts/*.js'])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(buildDir + '/scripts'));
@@ -55,7 +55,7 @@ gulp.task('inject-html', ['copy-html', 'build-css', 'build-js', 'copy-images'], 
         removeTags: true,
         transform: function (filepath, file, i, length) {
             if (filepath.slice(-3) === '.js') {
-                return '<script src="' + filepath + '" defer></script>';
+                return '<script src="' + filepath + '" async></script>';
             }
             return inject.transform.apply(inject.transform, arguments);
         }
