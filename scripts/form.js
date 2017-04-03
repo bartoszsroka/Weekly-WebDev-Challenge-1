@@ -1,31 +1,33 @@
+"use strict";
+
 $(document).ready(
-    function(){
-        function containerCssClass(){
+    function () {
+        function containerCssClass() {
             return ".b-form-item";
-        };
+        }
 
-        function containerFocusedCssClass(){
-            return "b-form-item--focused"
-        };
+        function containerFocusedCssClass() {
+            return "b-form-item--focused";
+        }
 
-        function containerHoveredCssClass(){
-            return "b-form-item--hovered"
-        };
+        function containerHoveredCssClass() {
+            return "b-form-item--hovered";
+        }
 
-        function formComponentsSelector(){
+        function formComponentsSelector() {
             return ".b-form-input, .b-form-input--multiline";
-        };
+        }
 
-        var addClassFunction = function(cssClass){
-            return function(){
+        var addClassFunction = function (cssClass) {
+            return function () {
                 $(this).closest(containerCssClass()).addClass(cssClass);
-            }
+            };
         };
 
-        var removeClassFunction = function(cssClass){
-            return function(){
+        var removeClassFunction = function (cssClass) {
+            return function () {
                 $(this).closest(containerCssClass()).removeClass(cssClass);
-            }
+            };
         };
 
         $(formComponentsSelector()).focusin(addClassFunction(containerFocusedCssClass()));
