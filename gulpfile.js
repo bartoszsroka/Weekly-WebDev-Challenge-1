@@ -9,6 +9,7 @@ const inject = require('gulp-inject');
 const es = require('event-stream');
 const htmllint = require('gulp-htmllint')
 const gutil = require('gulp-util');
+const jslint = require('gulp-jslint');
 
 const buildDir = "./docs";
 
@@ -94,4 +95,15 @@ function htmllintReporter(filepath, issues) {
     }
 }
 
+gulp.task('jslint', function () {
+	var options = {
+		global: ['document',  '$'],
+		this: true
+	};
+    return gulp.src(['scripts/form.js'])
+            .pipe(jslint(options))
+            .pipe(jslint.reporter('default'));
+});
+
+gulp.task('lint', ['htmllint', 'jslint']);
 gulp.task('default', ['inject-html']);
