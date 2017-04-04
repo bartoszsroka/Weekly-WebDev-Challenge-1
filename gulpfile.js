@@ -6,7 +6,9 @@ const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const inject = require('gulp-inject');
-const es = require('event-stream')
+const es = require('event-stream');
+const htmllint = require('gulp-htmllint')
+const gutil = require('gulp-util');
 
 const buildDir = "./docs";
 
@@ -71,5 +73,25 @@ gulp.task('inject-html', ['copy-html', 'build-css', 'build-js', 'copy-images'], 
         }))
         .pipe(gulp.dest(buildDir));
 });
+
+gulp.task('htmllint', function() {
+	var options = {
+		config: "htmllint.json"
+	};
+    return gulp.src('index.html')
+        .pipe(htmllint(options, htmllintReporter));
+});
+
+function htmllintReporter(filepath, issues) {
+    if (issues.length > 0) {
+        issues.forEach(function (issue) {
+            gutil.log(gutil.colors.cyan('[gulp-htmllint] ') +
+                gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') +
+                gutil.colors.red('(' + issue.code + ') ' + issue.msg));
+        });
+
+        process.exitCode = 1;
+    }
+}
 
 gulp.task('default', ['inject-html']);
