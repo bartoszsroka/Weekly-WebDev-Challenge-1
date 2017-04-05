@@ -10,6 +10,7 @@ const es = require('event-stream');
 const htmllint = require('gulp-htmllint')
 const gutil = require('gulp-util');
 const jslint = require('gulp-jslint');
+const csslint = require('gulp-csslint');
 
 const buildDir = "./docs";
 
@@ -100,10 +101,16 @@ gulp.task('jslint', function () {
 		global: ['document',  '$'],
 		this: true
 	};
-    return gulp.src(['scripts/form.js'])
+    return gulp.src(['scripts/*.js'])
             .pipe(jslint(options))
             .pipe(jslint.reporter('default'));
 });
 
-gulp.task('lint', ['htmllint', 'jslint']);
+gulp.task('csslint', function() {
+  gulp.src('styles/*.css')
+    .pipe(csslint())
+    .pipe(csslint.formatter());
+});
+
+gulp.task('lint', ['htmllint', 'jslint', 'csslint']);
 gulp.task('default', ['inject-html']);
