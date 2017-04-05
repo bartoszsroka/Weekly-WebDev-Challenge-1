@@ -18,7 +18,7 @@
 
 .b--shadowed {
 	background-color: #F8F8F8;
-	box-shadow: inset 0px -20px 43px -40px rgba(0,0,0,0.75);
+	box-shadow: inset 0 -20px 43px -40px rgba(0,0,0,0.75);
 }
 
 .b--transparent {
@@ -42,11 +42,11 @@
 
 .b-form-item--focused {
 	border: 1px solid grey;
-    box-shadow: inset 0px -20px 43px -30px rgba(0,0,0,0.75);
+    box-shadow: inset 0 -20px 43px -30px rgba(0,0,0,0.75);
 }
 
 .b-form-item--hovered {
-	box-shadow: inset 0px -20px 43px -35px rgba(0,0,0,0.75);
+	box-shadow: inset 0 -20px 43px -35px rgba(0,0,0,0.75);
 }
 
 .b-form-input {
@@ -81,7 +81,7 @@
     height: 26px;
     border: 1px solid rgba(195, 195, 195, 0.8);
     border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.74902) 0px -20px 43px -40px inset;
+    box-shadow: rgba(0, 0, 0, 0.74902) 0 -20px 43px -40px inset;
     margin: 0 10px 0 0 ;
     position: relative;
     top: -3px;

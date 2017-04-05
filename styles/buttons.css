@@ -1,18 +1,17 @@
 .b-button {
-    cursor: pointer;
-    font-size: 1.2em;
-    cursor: pointer;
     color: #FFFFFF;
-    opacity: 0.9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    height: 46px;
-    text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.8);
+    cursor: pointer;
     display: inline-block;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    font-size: 1.2em;
+    height: 46px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.8);
 }
 
 .b-button:hover {
-    opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
 }
 
 .b-button--disabled {
@@ -20,9 +19,13 @@
 }
 
 .b-button--submit {
-    border: solid 1px #3B9A00;
-    background: -webkit-linear-gradient(bottom, #80C420 31%, #A0D63C 77%);
+    background: -moz-linear-gradient(0deg, #80C420 31%, #A0D63C 77%);
+    background: -ms-linear-gradient(0deg, #80C420 31%, #A0D63C 77%);
+    background: -o-linear-gradient(0deg, #80C420 31%, #A0D63C 77%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.31, #80C420), color-stop(0.77, #A0D63C));
+    background: -webkit-linear-gradient(0deg, #80C420 31%, #A0D63C 77%);
     background: linear-gradient(0deg, #80C420 31%, #A0D63C 77%);
+    border: solid 1px #3B9A00;
 }
 
 .b-button--reset {
@@ -30,15 +33,23 @@
 }
 
 .b-button--reset-primary {
-    border: solid 1px #A4202A;
-    background: -webkit-linear-gradient(bottom, #F13A4A 31%, #F65E70 77%);
+    background: -moz-linear-gradient(0deg, #F13A4A 31%, #F65E70 77%);
+    background: -ms-linear-gradient(0deg, #F13A4A 31%, #F65E70 77%);
+    background: -o-linear-gradient(0deg, #F13A4A 31%, #F65E70 77%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.31, #F13A4A), color-stop(0.77, #F65E70));
+    background: -webkit-linear-gradient(0deg, #F13A4A 31%, #F65E70 77%);
     background: linear-gradient(0deg, #F13A4A 31%, #F65E70 77%);
+    border: solid 1px #A4202A;
 }
 
 .b-button--reset-secondary {
-    border: solid 1px #90CA6D;
-    background: -webkit-linear-gradient(bottom, #ACD182 31%, #C5E0A4 77%);
+    background: -moz-linear-gradient(0deg, #ACD182 31%, #C0E0A4 77%);
+    background: -ms-linear-gradient(0deg, #ACD182 31%, #C0E0A4 77%);
+    background: -o-linear-gradient(0deg, #ACD182 31%, #C0E0A4 77%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.31, #ACD182), color-stop(0.77, #C0E0A4));
+    background: -webkit-linear-gradient(0deg, #ACD182 31%, #C0E0A4 77%);
     background: linear-gradient(0deg, #ACD182 31%, #C0E0A4 77%);
+    border: solid 1px #90CA6D;
 }
 
 .b-button--size-big {
@@ -46,6 +57,6 @@
 }
 
 .b-button--size-small {
-    width: 40%;
     display: inline-block;
+    width: 40%;
 }
