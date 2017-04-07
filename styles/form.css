@@ -56,6 +56,9 @@
 
 .b-form-input {
 	 box-sizing: content-box;
+	 color: inherit;
+	 font-family: inherit;
+	 font-size: inherit;
 	 padding-left: 23px;
 	 width: 100%;
 }
