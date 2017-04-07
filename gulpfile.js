@@ -108,7 +108,7 @@ gulp.task('jslint', function () {
 
 gulp.task('csslint', function() {
   gulp.src('styles/*.css')
-    .pipe(csslint())
+    .pipe(csslint({"box-sizing": false}))
     .pipe(csslint.formatter());
 });
 

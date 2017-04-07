@@ -1,65 +1,64 @@
 /*TODO: Refactor*/
 .b-sprite {
-    background-image: url('../images/spritesheet.png');
     background-repeat: no-repeat;
     display: block;
     margin: 2px 0 0 10px;
 }
 
 .b-sprite--arrow {
-    width: 16px;
-    height: 8px;
     background-position: -5px -5px;
+    height: 8px;
+    opacity: 1;
     position: absolute;
     right: 10px;
     top: 15px;
-    opacity: 1;
+    width: 16px;
 }
 
 .b-sprite--checkbox {
-    width: 13px;
-    height: 14px;
     background-position: -31px -5px;
+    height: 14px;
+    width: 13px;
 }
 
 .b-sprite--email {
-    width: 28px;
-    height: 26px;
     background-position: -54px -5px;
+    height: 26px;
+    width: 32px;
 }
 
 .b-sprite--location {
-    width: 28px;
-    height: 26px;
     background-position: -88px -5px;
+    height: 26px;
+    width: 32px;
 }
 
 .b-sprite--logo-bottom {
-    width: 353px;
-    height: 130px;
     background-position: -5px -41px;
+    height: 132px;
+    width: 353px;
 }
 
 .b-sprite--logo-top {
-    width: 434px;
-    height: 116px;
     background-position: -5px -181px;
+    height: 116px;
+    width: 434px;
 }
 
 .b-sprite--password {
-    width: 28px;
-    height: 26px;
     background-position: -122px -5px;
+    height: 26px;
+    width: 32px;
 }
 
 .b-sprite--phone {
-    width: 28px;
-    height: 26px;
     background-position: -156px -5px;
+    height: 26px;
+    width: 32px;
 }
 
 .b-sprite--username {
-    width: 28px;
-    height: 26px;
     background-position: -190px -5px;
+    height: 26px;
+    width: 32px;
 }

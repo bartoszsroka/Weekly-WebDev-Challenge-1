@@ -1,12 +1,13 @@
 .b-section {
-    max-width: 420px;
     clear: both;
+    max-width: 420px;
 }
 
 .b-form-container  {
+    background-color: lightgrey;
     background-color: rgba(7, 7, 7, 0.231);
-    max-width: 415px;
     margin-top: 5px;
+    max-width: 415px;
     padding: 20px;
 }
 
@@ -18,6 +19,7 @@
 
 .b--shadowed {
 	background-color: #F8F8F8;
+	box-shadow: inset 0 -20px 43px -40px grey;
 	box-shadow: inset 0 -20px 43px -40px rgba(0,0,0,0.75);
 }
 
@@ -33,42 +35,48 @@
 }
 
 .b-form-item {
-	padding: 5px;
+    border: 1px solid grey;
+    border: 1px solid rgba(195, 195, 195, 0.8);
     margin: 0;
     margin-bottom: 10px;
-    border: 1px solid rgba(195, 195, 195, 0.8);
+	padding: 5px;
     position: relative;
 }
 
 .b-form-item--focused {
 	border: 1px solid grey;
+	box-shadow: inset 0 -20px 43px -30px grey;
     box-shadow: inset 0 -20px 43px -30px rgba(0,0,0,0.75);
 }
 
 .b-form-item--hovered {
+    box-shadow: inset 0 -20px 43px -35px grey;
 	box-shadow: inset 0 -20px 43px -35px rgba(0,0,0,0.75);
 }
 
 .b-form-input {
-	 width: 100%;
+	 box-sizing: content-box;
 	 padding-left: 23px;
-	 outline: none;
+	 width: 100%;
 }
 
 .b-form-input--no-border {
 	border: none;
+	border-left: 1px solid lightgrey;
     border-left: 1px solid rgba(195, 195, 195, 0.8);
-    margin-left: 23px;
-    height: 30px;
     color: #AFAFAF;
+    height: 30px;
+    margin-left: 23px;
 }
 
 .b-form-input--multiline {
+	box-sizing: content-box;
     height: 100px;
-    padding-top: 10px;
-    padding-left: 10px;
     overflow: auto;
+    padding-left: 10px;
+    padding-top: 10px;
     resize: vertical;
+    width: calc(100% - 17px);
 }
 
 .b-form-input--check {
@@ -76,28 +84,29 @@
 }
 
 .b-form-input--check + label::before {
- 	content: '';
-    width: 26px;
-    height: 26px;
+    border: 1px solid lightgrey;
     border: 1px solid rgba(195, 195, 195, 0.8);
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.74902) 0 -20px 43px -40px inset;
+ 	box-sizing: content-box;
+ 	content: '';
+    cursor: pointer;
+    display: block;
+    height: 25px;
     margin: 0 10px 0 0 ;
     position: relative;
     top: -3px;
-    cursor: pointer;
-    display: block;
+    width: 25px;
  }
 
  .b-form-input--check:checked + label::before {
- 	background-image: url('../images/spritesheet.png');
     background-position: -25px 1px;
  }
 
 .b-form-input--multi-option {
-	width: 100%;
     -moz-appearance: none;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+	width: 100%;
 }
 
 .b-form-input--multi-option::-ms-expand {
