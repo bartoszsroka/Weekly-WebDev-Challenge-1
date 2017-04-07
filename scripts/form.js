@@ -30,6 +30,7 @@ $(document).ready(
             };
         };
 
+        $(formComponentsSelector()).css("outline", "none");
         $(formComponentsSelector()).focusin(addClassFunction(containerFocusedCssClass()));
         $(formComponentsSelector()).mouseover(addClassFunction(containerHoveredCssClass()));
         $(formComponentsSelector()).focusout(removeClassFunction(containerFocusedCssClass()));
