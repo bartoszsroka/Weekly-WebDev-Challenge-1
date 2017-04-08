@@ -63,6 +63,17 @@
 	width: 100%;
 }
 
+.b-form-input__arrow {
+	opacity: 1;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.b-form-input__icon {
+	margin: 2px 0 0 10px;
+}
+
 .b-form-input--no-border {
 	border: none;
 	border-left: 1px solid lightgrey;

@@ -1,17 +1,11 @@
-/*TODO: Refactor*/
 .b-sprite {
     background-repeat: no-repeat;
     display: block;
-    margin: 2px 0 0 10px;
 }
 
 .b-sprite--arrow {
     background-position: -5px -5px;
     height: 8px;
-    opacity: 1;
-    position: absolute;
-    right: 10px;
-    top: 15px;
     width: 16px;
 }
 
