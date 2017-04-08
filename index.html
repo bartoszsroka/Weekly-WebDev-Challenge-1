@@ -49,10 +49,13 @@
                     <option>Russia</option>
                 </select>
             </label>
-            <input id="accept-register-terms" type="checkbox" class="b-form-input b-form-input--check" checked>
-            <label for="accept-register-terms" class="b--flexible">
-                I have read and accept the terms of use.
-            </label>
+            <div class="b-checkbox-container b--flexible">
+                <input id="accept-register-terms" type="checkbox" class="b-form-input b-form-input--check" checked>
+                <label for="accept-register-terms" class="b-checkbox-container__label b--flexible">
+                    <span class="b-checkbox-container__control  b--rounded b--shadowed"></span>
+                    I have read and accept the terms of use.
+                </label>
+            </div>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign up">
             </span>
@@ -73,10 +76,13 @@
                 <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Your Email"/>
             </label>
             <textarea class="b-form-item b-form-input b-form-input--multiline b--rounded b--transparent b--shadowed" required placeholder="Type your message..."></textarea>
-            <input id="send-copy" type="checkbox" class="b-form-input b-form-input--check" checked>
-            <label for="send-copy" class="b--flexible">
-                Send a copy to my Email
-            </label>
+            <div class="b-checkbox-container b--flexible">
+                <input id="send-copy" type="checkbox" class="b-form-input b-form-input--check" checked>
+                <label for="send-copy" class="b-checkbox-container__label b--flexible">
+                    <span class="b-checkbox-container__control  b--rounded b--shadowed"></span>
+                    Send a copy to my Email
+                </label>
+            </div>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Send Email">
             </span>
@@ -95,10 +101,13 @@
             <label class="b-form-item b--rounded b--shadowed b--flexible">
                 <i class="b-sprite b-sprite--password b-form-input__icon"></i>
                 <input class="b-form-input b-form-input--no-border b--transparent" type="password" required placeholder="Password"/></label>
-            <input id="remember-me" type="checkbox" class="b-form-input b-form-input--check" checked>
-            <label for="remember-me" class="b--flexible">
-                Remember me
-            </label>
+            <div class="b-checkbox-container b--flexible">
+                <input id="remember-me" type="checkbox" class="b-form-input b-form-input--check" checked>
+                <label for="remember-me" class="b-checkbox-container__label b--flexible">
+                    <span class="b-checkbox-container__control  b--rounded b--shadowed"></span>
+                    Remember me
+                </label>
+            </div>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign in">
             </span>
