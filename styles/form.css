@@ -1,19 +1,19 @@
 .b-section {
     clear: both;
-    max-width: 420px;
+    width: 420px;
 }
 
 .b-form-container  {
     background-color: lightgrey;
     background-color: rgba(7, 7, 7, 0.231);
     margin-top: 5px;
-    max-width: 415px;
+    width: 415px;
     padding: 20px;
 }
 
 .b-form  {
     background-color: #F8F8F8;
-    max-width: 370px;
+    width: 370px;
     padding: 22px;
 }
 
@@ -50,7 +50,7 @@
 	opacity: 1;
     position: absolute;
     right: 10px;
-    top: 15px;
+    top: 16px;
 }
 
 .b-form-input__icon {
