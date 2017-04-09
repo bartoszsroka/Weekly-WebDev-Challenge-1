@@ -1,20 +1,22 @@
 .b-section {
     clear: both;
-    width: 420px;
+    width: 455px;
 }
 
 .b-form-container  {
     background-color: lightgrey;
     background-color: rgba(7, 7, 7, 0.231);
+    box-sizing: content-box;
     margin-top: 5px;
-    width: 415px;
     padding: 20px;
+    width: 415px;
 }
 
 .b-form  {
     background-color: #F8F8F8;
-    width: 370px;
+    box-sizing: content-box;
     padding: 22px;
+    width: 370px;
 }
 
 .b-form-item {
