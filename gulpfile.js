@@ -6,10 +6,8 @@ const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const inject = require('gulp-inject');
-const es = require('event-stream');
 const htmllint = require('gulp-htmllint')
 const gutil = require('gulp-util');
-const jslint = require('gulp-jslint');
 const csslint = require('gulp-csslint');
 
 const buildDir = "./docs";
@@ -23,13 +21,6 @@ gulp.task('build-css', ['clean'], function() {
         .pipe(concat('styles.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest(buildDir + '/styles'));
-   });
-
-gulp.task('build-js', ['clean'], function() {
-    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'scripts/*.js'])
-        .pipe(concat('scripts.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(buildDir + '/scripts'));
 });
 
 gulp.task('copy-images', ['clean'], function() {
@@ -53,23 +44,13 @@ gulp.task('copy-html', ['clean'], function() {
         .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('inject-html', ['copy-html', 'build-css', 'build-js', 'copy-images'], function() {
-    var options = {
-        relative: true,
-        removeTags: true,
-        transform: function (filepath, file, i, length) {
-            if (filepath.slice(-3) === '.js') {
-                return '<script src="' + filepath + '" async></script>';
-            }
-            return inject.transform.apply(inject.transform, arguments);
-        }
-    };
-
-    var jsStream = gulp.src(buildDir + '/scripts/scripts.min.js');
+gulp.task('inject-html', ['copy-html', 'build-css', 'copy-images'], function() {
+	var options = {
+		relative: true
+	};
     var cssStream = gulp.src(buildDir + '/styles/styles.min.css');
-
     return gulp.src(buildDir + '/index.html')
-        .pipe(inject(es.merge(jsStream, cssStream), options))
+        .pipe(inject(cssStream, options))
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
@@ -96,21 +77,11 @@ function htmllintReporter(filepath, issues) {
     }
 }
 
-gulp.task('jslint', function () {
-	var options = {
-		global: ['document',  '$'],
-		this: true
-	};
-    return gulp.src(['scripts/*.js'])
-            .pipe(jslint(options))
-            .pipe(jslint.reporter('default'));
-});
-
 gulp.task('csslint', function() {
   gulp.src('styles/*.css')
     .pipe(csslint({"box-sizing": false}))
     .pipe(csslint.formatter());
 });
 
-gulp.task('lint', ['htmllint', 'jslint', 'csslint']);
+gulp.task('lint', ['htmllint', 'csslint']);
 gulp.task('default', ['inject-html']);
