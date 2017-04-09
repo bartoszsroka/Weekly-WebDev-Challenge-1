@@ -1,14 +1,14 @@
 .b-logo {
- 	opacity: 0.2;
+    opacity: 0.2;
 }
 
 .b-logo:hover {
- 	opacity: 1;
+    opacity: 1;
 }
 
 .b-logo--animated {
-	transition: opacity 2s;
-	-moz-transition: opacity 2s;
-	-webkit-transition: opacity 2s;
-	-o-transition: opacity 2s;
+    transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
 }

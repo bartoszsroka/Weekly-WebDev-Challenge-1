@@ -24,51 +24,51 @@
     border: 1px solid rgba(195, 195, 195, 0.8);
     margin: 0;
     margin-bottom: 10px;
-	padding: 5px;
+    padding: 5px;
     position: relative;
 }
 
 .b-form-item--focused {
-	border: 1px solid grey;
-	box-shadow: inset 0 -20px 43px -30px grey;
+    border: 1px solid grey;
+    box-shadow: inset 0 -20px 43px -30px grey;
     box-shadow: inset 0 -20px 43px -30px rgba(0,0,0,0.75);
 }
 
 .b-form-item--hovered {
     box-shadow: inset 0 -20px 43px -35px grey;
-	box-shadow: inset 0 -20px 43px -35px rgba(0,0,0,0.75);
+    box-shadow: inset 0 -20px 43px -35px rgba(0,0,0,0.75);
 }
 
 .b-form-input {
-	box-sizing: content-box;
-	color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	padding-left: 23px;
-	width: 100%;
+    box-sizing: content-box;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 23px;
+    width: 100%;
 }
 
 .b-form-input__arrow {
-	opacity: 1;
+    opacity: 1;
     position: absolute;
     right: 10px;
     top: 16px;
 }
 
 .b-form-input__icon {
-	margin: 2px 0 0 10px;
+    margin: 2px 0 0 10px;
 }
 
 .b-form-input--no-border {
-	border: none;
-	border-left: 1px solid lightgrey;
+    border: none;
+    border-left: 1px solid lightgrey;
     border-left: 1px solid rgba(195, 195, 195, 0.8);
     height: 30px;
     margin-left: 23px;
 }
 
 .b-form-input--multiline {
-	box-sizing: content-box;
+    box-sizing: content-box;
     height: 100px;
     overflow: auto;
     padding-left: 10px;
@@ -78,7 +78,7 @@
 }
 
 .b-form-input--check {
-	display: none;
+    display: none;
 }
 
 .b-form-input--check:checked + label::before {
@@ -100,46 +100,34 @@
 }
 
 .b-checkbox-container {
-	margin-bottom: 10px;
-	position: relative;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .b-checkbox-container__control {
-	border: 1px solid grey;
+    border: 1px solid grey;
     border: 1px solid rgba(195, 195, 195, 0.8);
     box-sizing: content-box;
-	display: inline-block;
-	height: 25px;
-	margin-right: 10px;
-	width: 25px;
+    display: inline-block;
+    height: 25px;
+    margin-right: 10px;
+    width: 25px;
 }
 
 .b-checkbox-container__label {
-	line-height: 27px;
+    line-height: 27px;
 }
 
 .b-form-input--multi-option {
     -moz-appearance: none;
     -webkit-appearance: none;
-	width: 100%;
+    width: 100%;
 }
 
 .b-form-input--multi-option::-ms-expand {
     display: none;
 }
 
-::-webkit-input-placeholder {
-    color: inherit;
-}
-
-:-moz-placeholder {
-    color: inherit;
-}
-
-::-moz-placeholder {
-    color: inherit;
-}
-
-:-ms-input-placeholder {
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
     color: inherit;
 }

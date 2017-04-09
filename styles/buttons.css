@@ -15,7 +15,7 @@
 }
 
 .b-button--disabled {
-	cursor: not-allowed;
+    cursor: not-allowed;
 }
 
 .b-button--submit {
@@ -29,7 +29,7 @@
 }
 
 .b-button--reset {
-	float: right;
+    float: right;
 }
 
 .b-button--reset-primary {
