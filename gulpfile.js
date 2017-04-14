@@ -10,6 +10,7 @@ const htmllint = require('gulp-htmllint')
 const gutil = require('gulp-util');
 const csslint = require('gulp-csslint');
 const cssbeautify = require('gulp-cssbeautify');
+const jsbeautify = require('gulp-jsbeautify');
 
 const buildDir = "./docs";
 
@@ -46,9 +47,9 @@ gulp.task('copy-html', ['clean'], function() {
 });
 
 gulp.task('inject-html', ['copy-html', 'build-css', 'copy-images'], function() {
-	var options = {
-		relative: true
-	};
+    var options = {
+        relative: true
+    };
     var cssStream = gulp.src(buildDir + '/styles/styles.min.css');
     return gulp.src(buildDir + '/index.html')
         .pipe(inject(cssStream, options))
@@ -59,16 +60,16 @@ gulp.task('inject-html', ['copy-html', 'build-css', 'copy-images'], function() {
 });
 
 gulp.task('htmllint', function() {
-	var options = {
-		config: "htmllint.json"
-	};
+    var options = {
+        config: "htmllint.json"
+    };
     return gulp.src('index.html')
         .pipe(htmllint(options, htmllintReporter));
 });
 
 function htmllintReporter(filepath, issues) {
     if (issues.length > 0) {
-        issues.forEach(function (issue) {
+        issues.forEach(function(issue) {
             gutil.log(gutil.colors.cyan('[gulp-htmllint] ') +
                 gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') +
                 gutil.colors.red('(' + issue.code + ') ' + issue.msg));
@@ -79,17 +80,25 @@ function htmllintReporter(filepath, issues) {
 }
 
 gulp.task('csslint', function() {
-  gulp.src('styles/*.css')
-    .pipe(csslint({"box-sizing": false}))
-    .pipe(csslint.formatter());
+    gulp.src('styles/*.css')
+        .pipe(csslint({
+            "box-sizing": false
+        }))
+        .pipe(csslint.formatter());
 });
 
 gulp.task('format-css', function() {
-  gulp.src('styles/*.css')
-     .pipe(cssbeautify())
-     .pipe(gulp.dest('./styles/'));;
+    gulp.src('styles/*.css')
+        .pipe(cssbeautify())
+        .pipe(gulp.dest('./styles/'));;
+});
+
+gulp.task('format-js', function() {
+    gulp.src('*.js')
+        .pipe(jsbeautify())
+        .pipe(gulp.dest('.'));;
 });
 
 gulp.task('lint', ['htmllint', 'csslint']);
-gulp.task('format', ['format-css']);
+gulp.task('format', ['format-css', 'format-js']);
 gulp.task('default', ['inject-html']);
