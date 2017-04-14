@@ -1,5 +1,6 @@
 {
   "line-end-style": "crlf",
   "id-class-style": "bem",
-  "tag-bans": ["style", "b"]
+  "tag-bans": ["style", "b"],
+  "indent-width-cont": true
 }
