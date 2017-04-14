@@ -2,5 +2,6 @@
   "line-end-style": "crlf",
   "id-class-style": "bem",
   "tag-bans": ["style", "b"],
-  "indent-width-cont": true
+  "indent-width-cont": true,
+  "attr-name-style": "dash"
 }

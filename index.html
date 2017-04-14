@@ -50,10 +50,13 @@
             <div class="b-checkbox-container b--flexible">
                 <input id="accept-register-terms" type="checkbox" class="b-form-input b-form-input--check" checked>
                 <label for="accept-register-terms" class="b-checkbox-container__label b--flexible">
-                    <span role="checkbox" aria-checked="true" class="b-checkbox-container__control  b--rounded b--shadowed" tabindex="0"></span>
+                    <!--TODO: Accessibility ARIA, JS-->
+                    <span role="checkbox" aria-checked="true" aria-label="I have read and accept the terms of use." class="b-checkbox-container__control  b--rounded b--shadowed"
+                          tabindex="0"></span>
                     I have read and accept the terms of use.
                 </label>
-            </div>`
+            </div>
+            `
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign up">
             </span>
@@ -77,7 +80,8 @@
             <div class="b-checkbox-container b--flexible">
                 <input id="send-copy" type="checkbox" class="b-form-input b-form-input--check" checked>
                 <label for="send-copy" class="b-checkbox-container__label b--flexible">
-                    <span class="b-checkbox-container__control  b--rounded b--shadowed" tabindex="0"></span>
+                    <span role="checkbox" aria-checked="true" aria-label="Send a copy to my Email" class="b-checkbox-container__control  b--rounded b--shadowed"
+                          tabindex="0"></span>
                     Send a copy to my Email
                 </label>
             </div>
@@ -102,7 +106,8 @@
             <div class="b-checkbox-container b--flexible">
                 <input id="remember-me" type="checkbox" class="b-form-input b-form-input--check" checked>
                 <label for="remember-me" class="b-checkbox-container__label b--flexible">
-                    <span class="b-checkbox-container__control  b--rounded b--shadowed" tabindex="0"></span>
+                    <span role="checkbox" aria-checked="true" aria-label="Remember me" class="b-checkbox-container__control  b--rounded b--shadowed"
+                          tabindex="0"></span>
                     Remember me
                 </label>
             </div>
