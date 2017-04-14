@@ -9,6 +9,7 @@ const inject = require('gulp-inject');
 const htmllint = require('gulp-htmllint')
 const gutil = require('gulp-util');
 const csslint = require('gulp-csslint');
+const cssbeautify = require('gulp-cssbeautify');
 
 const buildDir = "./docs";
 
@@ -83,5 +84,12 @@ gulp.task('csslint', function() {
     .pipe(csslint.formatter());
 });
 
+gulp.task('format-css', function() {
+  gulp.src('styles/*.css')
+     .pipe(cssbeautify())
+     .pipe(gulp.dest('./styles/'));;
+});
+
 gulp.task('lint', ['htmllint', 'csslint']);
+gulp.task('format', ['format-css']);
 gulp.task('default', ['inject-html']);

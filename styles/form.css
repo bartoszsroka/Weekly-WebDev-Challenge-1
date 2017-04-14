@@ -4,7 +4,7 @@
     max-width: 455px;
 }
 
-.b-form-container  {
+.b-form-container {
     background-color: lightgrey;
     background-color: rgba(7, 7, 7, 0.231);
     box-sizing: content-box;
@@ -12,7 +12,7 @@
     padding: 10px;
 }
 
-.b-form  {
+.b-form {
     background-color: #F8F8F8;
     box-sizing: content-box;
     padding: 10px;
