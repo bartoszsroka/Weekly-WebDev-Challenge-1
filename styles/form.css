@@ -1,6 +1,7 @@
 .b-section {
     clear: both;
-    width: 455px;
+    margin: auto;
+    max-width: 455px;
 }
 
 .b-form-container  {
@@ -8,15 +9,13 @@
     background-color: rgba(7, 7, 7, 0.231);
     box-sizing: content-box;
     margin-top: 5px;
-    padding: 20px;
-    width: 415px;
+    padding: 10px;
 }
 
 .b-form  {
     background-color: #F8F8F8;
     box-sizing: content-box;
-    padding: 22px;
-    width: 370px;
+    padding: 10px;
 }
 
 .b-form-item {
@@ -28,14 +27,14 @@
 }
 
 .b-form-item::before {
-	border-right: 1px solid grey;
+    border-right: 1px solid grey;
     border-right: 1px solid rgba(195, 195, 195, 0.8);
     content: '';
     display: block;
-    height: 30px;
+    height: 26px;
     left: 45px;
     position: absolute;
-    top: 5px;
+    top: calc(50% - 13px);
 }
 
 .b-form-input {
@@ -44,38 +43,40 @@
     font-family: inherit;
     font-size: inherit;
     height: 40px;
-    padding-left: 10px;
+    padding-left: 8px;
     width: 100%;
 }
 
 .b-form-input:focus {
-	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-	outline: none;
+    outline: none;
 }
 
 .b-form-input__arrow {
     opacity: 1;
     position: absolute;
-    right: 10px;
-    top: 16px;
+    right: 5px;
+    top: calc(50% - 4px);
 }
 
 .b-form-input__icon {
-    margin: 7px 0 0 10px;
+    left: 5px;
+    position: absolute;
+    top: calc(50% - 13px);
 }
 
 .b-form-input--no-border {
     border: none;
-    margin-left: 10px;
+    margin-left: 46px;
 }
 
 .b-form-input--multiline {
     box-sizing: border-box;
     height: 100px;
     overflow: auto;
-    padding-left: 10px;
+    padding-left: 8px;
     padding-top: 10px;
     resize: vertical;
     width: 100%;
@@ -96,11 +97,11 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
     content: '';
-    height: 15px;
-    left: 6px;
+    height: 12px;
+    left: 4px;
     position: absolute;
-    top: 6px;
-    width: 15px;
+    top: 4px;
+    width: 12px;
 }
 
 .b-checkbox-container {
@@ -111,15 +112,17 @@
 .b-checkbox-container__control {
     border: 1px solid grey;
     border: 1px solid rgba(195, 195, 195, 0.8);
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: inline-block;
-    height: 25px;
+    height: 20px;
     margin-right: 10px;
-    width: 25px;
+    width: 20px;
 }
 
 .b-checkbox-container__label {
-    line-height: 27px;
+    font-size: 0.8em;
+    line-height: 20px;
+    width: 100%;
 }
 
 .b-form-input--multi-option {

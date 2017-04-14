@@ -17,43 +17,48 @@
 }
 
 .b-sprite--email {
-    background-position: -54px -5px;
+    background-position: -49px -5px;
     height: 26px;
-    width: 32px;
+    width: 33px;
 }
 
 .b-sprite--location {
-    background-position: -88px -5px;
+    background-position: -83px -5px;
     height: 26px;
-    width: 32px;
+    width: 33px;
 }
 
+.b-sprite--logo-top,
 .b-sprite--logo-bottom {
-    background-position: -5px -41px;
-    height: 132px;
-    width: 353px;
+    background-size: 100%;
+    margin: 10px auto auto;
+	width: 230px;
 }
 
 .b-sprite--logo-top {
-    background-position: -5px -181px;
-    height: 116px;
-    width: 434px;
+    background-position: -1px -90px;
+    height: 70px;
+}
+
+.b-sprite--logo-bottom {
+    background-position: 22px -20px;
+    height: 75px;
 }
 
 .b-sprite--password {
-    background-position: -122px -5px;
+    background-position: -117px -5px;
     height: 26px;
-    width: 32px;
+    width: 33px;
 }
 
 .b-sprite--phone {
-    background-position: -156px -5px;
+    background-position: -151px -5px;
     height: 26px;
-    width: 32px;
+    width: 33px;
 }
 
 .b-sprite--username {
-    background-position: -190px -5px;
+    background-position: -185px -5px;
     height: 26px;
-    width: 32px;
+    width: 33px;
 }
