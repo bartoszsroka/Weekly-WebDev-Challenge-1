@@ -55,6 +55,10 @@
     outline: none;
 }
 
+.b-form-input:required:invalid {
+    outline-width: 0;
+}
+
 .b-form-input__arrow {
     opacity: 1;
     position: absolute;
