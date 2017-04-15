@@ -1,130 +1,33 @@
 const gulp = require('gulp');
-const concat = require('gulp-concat');
-const cssmin = require('gulp-cssmin');
-const uglify = require('gulp-uglify');
 const del = require('del');
-const htmlmin = require('gulp-htmlmin');
-const imagemin = require('gulp-imagemin');
-const inject = require('gulp-inject');
-const htmllint = require('gulp-htmllint')
-const gutil = require('gulp-util');
-const csslint = require('gulp-csslint');
-const jslint = require('gulp-jslint');
-const cssbeautify = require('gulp-cssbeautify');
-const jsbeautify = require('gulp-jsbeautify');
-const es = require('event-stream');
-
-const buildDir = "./docs";
+const format = require('./gulp-tasks/format.js');
+const lint = require('./gulp-tasks/lint.js');
+const build = require('./gulp-tasks/build.js');
+const copy = require('./gulp-tasks/copy.js');
+const inject = require('./gulp-tasks/inject.js');
+const paths = require('./gulp-tasks/paths.js');
 
 gulp.task('clean', function () {
-    return del([buildDir]);
+    return del(paths.buildDir);
 });
 
-gulp.task('build-css', ['clean'], function () {
-    return gulp.src(['styles/reset.css', 'styles/main.css', 'styles/!(reset|main)*.css'])
-        .pipe(concat('styles.min.css'))
-        .pipe(cssmin())
-        .pipe(gulp.dest(buildDir + '/styles'));
-});
+gulp.task('lintJs', lint.lintJs);
+gulp.task('lintCss', lint.lintCss);
+gulp.task('lintHtml', lint.lintHtml);
+gulp.task('lint', ['lintJs', 'lintCss', 'lintHtml']);
 
-gulp.task('build-js', ['clean'], function () {
-    return gulp.src('scripts/*.js')
-        .pipe(concat('scripts.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(buildDir + '/scripts'));
-});
+gulp.task('formatCss', format.formatCss);
+gulp.task('formatJs', format.formatJs);
+gulp.task('format', ['formatCss', 'formatJs']);
 
-gulp.task('copy-images', ['clean'], function () {
-    return gulp.src('./images/**')
-        .pipe(imagemin([
-            imagemin.gifsicle({
-                interlaced: true
-            }), imagemin.jpegtran({
-                progressive: true
-            }), imagemin.optipng({
-                optimizationLevel: 5
-            })
-        ]))
-        .pipe(gulp.dest(buildDir + '/images'));
-});
+gulp.task('buildCss', ['clean'], build.buildCss);
+gulp.task('buildJs', ['clean'], build.buildJs);
+gulp.task('build', ['buildCss', 'buildJs']);
 
-gulp.task('copy-html', ['clean'], function () {
-    return gulp.src('index.html')
-        .pipe(gulp.dest(buildDir));
-});
+gulp.task('copyImages', ['clean'], copy.copyImages);
+gulp.task('copyHtml', ['clean'], copy.copyHtml);
+gulp.task('copy', ['copyImages', 'copyHtml']);
 
-gulp.task('inject-html', ['copy-html', 'build-css', 'build-js', 'copy-images'], function () {
-    var options = {
-        relative: true,
-        removeTags: true,
-        transform: function (filepath, file, i, length) {
-            if (filepath.slice(-3) === '.js') {
-                return '<script src="' + filepath + '"></script>';
-            }
-            return inject.transform.apply(inject.transform, arguments);
-        }
-    };
-    var cssStream = gulp.src(buildDir + '/styles/styles.min.css');
-    var jsStream = gulp.src(buildDir + '/scripts/scripts.min.js');
-    return gulp.src(buildDir + '/index.html')
-        .pipe(inject(es.merge(cssStream, jsStream), options))
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest(buildDir));
-});
+gulp.task('inject', ['copy', 'build'], inject.inject);
 
-gulp.task('htmllint', function () {
-    var options = {
-        config: "htmllint.json"
-    };
-    return gulp.src('index.html')
-        .pipe(htmllint(options, htmllintReporter));
-});
-
-function htmllintReporter(filepath, issues) {
-    if (issues.length > 0) {
-        issues.forEach(function (issue) {
-            gutil.log(gutil.colors.cyan('[gulp-htmllint] ') +
-                gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') +
-                gutil.colors.red('(' + issue.code + ') ' + issue.msg));
-        });
-
-        process.exitCode = 1;
-    }
-}
-
-gulp.task('csslint', function () {
-    gulp.src('styles/*.css')
-        .pipe(csslint({
-            "box-sizing": false
-        }))
-        .pipe(csslint.formatter());
-});
-
-gulp.task('jslint', function () {
-    var options = {
-        global: ['document']
-    };
-    return gulp.src(['scripts/*.js'])
-        .pipe(jslint(options))
-        .pipe(jslint.reporter('default'));
-});
-
-gulp.task('format-css', function () {
-    gulp.src('styles/*.css')
-        .pipe(cssbeautify())
-        .pipe(gulp.dest('./styles/'));;
-});
-
-gulp.task('format-js', function () {
-    gulp.src(['scripts/*.js'])
-        .pipe(jsbeautify({
-            "space_after_anon_function": true
-        }))
-        .pipe(gulp.dest('./scripts/'));
-});
-
-gulp.task('lint', ['htmllint', 'csslint', 'jslint']);
-gulp.task('format', ['format-css', 'format-js']);
-gulp.task('default', ['inject-html']);
+gulp.task('default', ['inject']);
