@@ -8,6 +8,8 @@
     <!-- inject:css -->
     <!-- endinject -->
 
+    <!-- inject:js -->
+    <!-- endinject -->
 </head>
 
 <body>
@@ -49,10 +51,9 @@
             </label>
             <div class="b-checkbox-container b--flexible">
                 <input id="accept-register-terms" type="checkbox" class="b-form-input b-form-input--check" checked>
-                <label for="accept-register-terms" class="b-checkbox-container__label b--flexible">
-                    <!--TODO: Accessibility ARIA, JS-->
-                    <span role="checkbox" aria-checked="true" aria-label="I have read and accept the terms of use." class="b-checkbox-container__control  b--rounded b--shadowed"
-                          tabindex="0"></span>
+                <label for="accept-register-terms" class="b-checkbox-container__label b--flexible" role="checkbox" aria-checked="true"
+                       aria-label="I have read and accept the terms of use.">
+                    <span class="b-checkbox-container__control  b--rounded b--shadowed" tabindex="0"></span>
                     I have read and accept the terms of use.
                 </label>
             </div>
@@ -79,8 +80,8 @@
             <textarea class="b-form-item b-form-input b-form-input--multiline b--rounded b--transparent b--shadowed" required placeholder="Type your message..."></textarea>
             <div class="b-checkbox-container b--flexible">
                 <input id="send-copy" type="checkbox" class="b-form-input b-form-input--check" checked>
-                <label for="send-copy" class="b-checkbox-container__label b--flexible">
-                    <span role="checkbox" aria-checked="true" aria-label="Send a copy to my Email" class="b-checkbox-container__control  b--rounded b--shadowed"
+                <label for="send-copy" class="b-checkbox-container__label b--flexible" role="checkbox" aria-checked="true" aria-label="Send a copy to my Email">
+                    <span class="b-checkbox-container__control  b--rounded b--shadowed"
                           tabindex="0"></span>
                     Send a copy to my Email
                 </label>
@@ -105,8 +106,8 @@
                 <input class="b-form-input b-form-input--no-border b--transparent" type="password" required placeholder="Password"/></label>
             <div class="b-checkbox-container b--flexible">
                 <input id="remember-me" type="checkbox" class="b-form-input b-form-input--check" checked>
-                <label for="remember-me" class="b-checkbox-container__label b--flexible">
-                    <span role="checkbox" aria-checked="true" aria-label="Remember me" class="b-checkbox-container__control  b--rounded b--shadowed"
+                <label for="remember-me" class="b-checkbox-container__label b--flexible" role="checkbox" aria-checked="true" aria-label="Remember me">
+                    <span class="b-checkbox-container__control  b--rounded b--shadowed"
                           tabindex="0"></span>
                     Remember me
                 </label>
