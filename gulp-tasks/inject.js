@@ -10,8 +10,10 @@ var _inject = function () {
         relative: true,
         removeTags: true,
         transform: function (filepath, file, i, length) {
-            if (filepath.slice(-3) === '.js') {
-                return '<script src="' + filepath + '" async></script>';
+            if(filepath.slice(-3) === '.js'){
+                return '<script>' +  file.contents.toString('utf8') + '</script>';
+            } else if(filepath.slice(-4) === '.css'){
+				return '<style>' +  file.contents.toString('utf8') + '</style>';
             }
             return inject.transform.apply(inject.transform, arguments);
         }
