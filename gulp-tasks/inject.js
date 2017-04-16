@@ -5,6 +5,10 @@ const es = require('event-stream');
 const paths = require('./paths.js');
 const htmlmin = require('gulp-htmlmin');
 
+gulp.task('clean', function () {
+    return del(paths.buildDir);
+});
+
 var _inject = function () {
     var options = {
         relative: true,

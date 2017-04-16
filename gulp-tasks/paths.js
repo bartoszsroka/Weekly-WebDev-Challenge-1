@@ -1,3 +1,3 @@
 module.exports = {
-    'buildDir': './docs'
+    'buildDir': './docs',
 };

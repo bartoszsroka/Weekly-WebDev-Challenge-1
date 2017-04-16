@@ -6,10 +6,9 @@ const build = require('./gulp-tasks/build.js');
 const copy = require('./gulp-tasks/copy.js');
 const inject = require('./gulp-tasks/inject.js');
 const paths = require('./gulp-tasks/paths.js');
+const clean = require('./gulp-tasks/clean.js');
 
-gulp.task('clean', function () {
-    return del(paths.buildDir);
-});
+gulp.task('clean', clean.clean);
 
 gulp.task('lintJs', lint.lintJs);
 gulp.task('lintCss', lint.lintCss);
@@ -29,5 +28,9 @@ gulp.task('copyHtml', ['clean'], copy.copyHtml);
 gulp.task('copy', ['copyImages', 'copyHtml']);
 
 gulp.task('inject', ['copy', 'build'], inject.inject);
+gulp.task('rebuildProd', ['inject'], function(){
+    clean.cleanJs();
+    clean.cleanCss();
+});
 
-gulp.task('default', ['inject']);
+gulp.task('default', ['rebuildProd']);
