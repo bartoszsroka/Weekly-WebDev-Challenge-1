@@ -26,17 +26,6 @@
     position: relative;
 }
 
-.b-form-item::before {
-    border-right: 1px solid grey;
-    border-right: 1px solid rgba(195, 195, 195, 0.8);
-    content: '';
-    display: block;
-    height: 26px;
-    left: 45px;
-    position: absolute;
-    top: calc(50% - 13px);
-}
-
 .b-form-input {
     box-sizing: border-box;
     color: inherit;

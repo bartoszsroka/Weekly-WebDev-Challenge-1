@@ -1,8 +1,9 @@
-.b-sprite {
+.b-sprite,
+.b-form-item::before {
     background-image: url('./images/spritesheet.png');
     background-repeat: no-repeat;
 }
-
+/*TODO: Use after here*/
 .b-sprite--arrow {
     background-position: -5px -5px;
     height: 8px;
@@ -13,18 +14,6 @@
     background-position: -31px -5px;
     height: 14px;
     width: 13px;
-}
-
-.b-sprite--email {
-    background-position: -49px -5px;
-    height: 26px;
-    width: 33px;
-}
-
-.b-sprite--location {
-    background-position: -83px -5px;
-    height: 26px;
-    width: 33px;
 }
 
 .b-sprite--logo-top,
@@ -44,20 +33,35 @@
     height: 75px;
 }
 
-.b-sprite--password {
-    background-position: -117px -5px;
+.b-form-item::before {
+    border-right: 1px solid grey;
+    border-right: 1px solid rgba(195, 195, 195, 0.8);
+    box-sizing: content-box;
+    content: '';
+    display: block;
     height: 26px;
-    width: 33px;
+    padding-right: 6px;
+    position: absolute;
+    top: calc(50% - 13px);
+    width: 38px;
 }
 
-.b-sprite--phone {
-    background-position: -151px -5px;
-    height: 26px;
-    width: 33px;
+.b-form-item--username::before {
+    background-position: -180px -5px;
 }
 
-.b-sprite--username {
-    background-position: -185px -5px;
-    height: 26px;
-    width: 33px;
+.b-form-item--password::before {
+    background-position: -112px -5px;
+}
+
+.b-form-item--email::before {
+    background-position: -44px -5px;
+}
+
+.b-form-item--location::before {
+    background-position: -78px -5px;
+}
+
+.b-form-item--phone::before {
+    background-position: -146px -5px;
 }
