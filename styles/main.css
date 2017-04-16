@@ -28,7 +28,7 @@ body {
 
 .b--shadowed {
     background-color: #F8F8F8;
-    box-shadow: inset 0 -20px 43px -40px grey;
+    box-shadow: inset 0 -20px 43px -40px #808080;
     box-shadow: inset 0 -20px 43px -40px rgba(0,0,0,0.75);
 }
 
