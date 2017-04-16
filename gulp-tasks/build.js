@@ -14,7 +14,7 @@ var buildCss = function () {
 var buildJs = function () {
     return gulp.src('scripts/*.js')
         .pipe(concat('scripts.min.js'))
-        /*.pipe(uglify())*/
+        .pipe(uglify())
         .pipe(gulp.dest(paths.buildDir + '/scripts'));
 };
 
