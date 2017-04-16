@@ -3,7 +3,7 @@
     background-image: url('./images/spritesheet.png');
     background-repeat: no-repeat;
 }
-/*TODO: Use after here*/
+/*TODO: Use after here, separate sprites for desktop and mobile*/
 .b-sprite--arrow {
     background-position: -5px -5px;
     height: 8px;
