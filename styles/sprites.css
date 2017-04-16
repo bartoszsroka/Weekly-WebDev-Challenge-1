@@ -1,7 +1,6 @@
 .b-sprite {
     background-image: url('../images/spritesheet.png');
     background-repeat: no-repeat;
-    display: block;
 }
 
 .b-sprite--arrow {
