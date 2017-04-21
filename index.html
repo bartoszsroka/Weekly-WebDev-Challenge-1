@@ -36,8 +36,7 @@
                 <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Email"/>
             </label>
             <label class="b-form-item b-form-item--location b--rounded b--shadowed b--flexible">
-                <div class="b-sprite b-sprite--location b-form-input__icon"></div>
-                <div class="b-sprite b-sprite--arrow b-form-input__arrow"></div>
+                <span class="b-sprite b-sprite--arrow b-form-input__arrow"></span>
                 <select class="b-form-input b-form-input--no-border b-form-input--multi-option b--transparent" required>
                     <option value="" disabled selected>Your Location</option>
                     <option>USA</option>
@@ -45,13 +44,8 @@
                     <option>Russia</option>
                 </select>
             </label>
-            <div class="b-checkbox-container b--flexible">
-                <input id="accept-register-terms" type="checkbox" class="b-form-input b-form-input--check" checked>
-                <label for="accept-register-terms" class="b-checkbox-container__label b--flexible" role="checkbox" aria-checked="true"
-                       aria-label="I have read and accept the terms of use.">
-                    <span class="b-checkbox-container__control  b--rounded b--shadowed" tabindex="0"></span>
-                    I have read and accept the terms of use.
-                </label>
+            <div tabindex="0" class="b-form-input--check" role="checkbox" aria-checked="true" aria-label="I have read and accept the terms of use.">
+                I have read and accept the terms of use.
             </div>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign up">
@@ -71,13 +65,8 @@
                 <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Your Email"/>
             </label>
             <textarea class="b-form-item b-form-input b-form-input--multiline b--rounded b--transparent b--shadowed" required placeholder="Type your message..."></textarea>
-            <div class="b-checkbox-container b--flexible">
-                <input id="send-copy" type="checkbox" class="b-form-input b-form-input--check" checked>
-                <label for="send-copy" class="b-checkbox-container__label b--flexible" role="checkbox" aria-checked="true" aria-label="Send a copy to my Email">
-                    <span class="b-checkbox-container__control  b--rounded b--shadowed"
-                          tabindex="0"></span>
-                    Send a copy to my Email
-                </label>
+            <div tabindex="0" class="b-form-input--check" role="checkbox" aria-checked="true" aria-label="Send a copy to my Email">
+                Send a copy to my Email
             </div>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Send Email">
@@ -95,13 +84,8 @@
             </label>
             <label class="b-form-item b-form-item--password b--rounded b--shadowed b--flexible">
                 <input class="b-form-input b-form-input--no-border b--transparent" type="password" required placeholder="Password"/></label>
-            <div class="b-checkbox-container b--flexible">
-                <input id="remember-me" type="checkbox" class="b-form-input b-form-input--check" checked>
-                <label for="remember-me" class="b-checkbox-container__label b--flexible" role="checkbox" aria-checked="true" aria-label="Remember me">
-                    <span class="b-checkbox-container__control  b--rounded b--shadowed"
-                          tabindex="0"></span>
-                    Remember me
-                </label>
+            <div tabindex="0" class="b-form-input--check" role="checkbox" aria-checked="true" aria-label="Remember me">
+                Remember me
             </div>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-big b--rounded" value="Sign in">

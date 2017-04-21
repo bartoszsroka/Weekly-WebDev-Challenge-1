@@ -11,7 +11,7 @@
         }
     };
 
-    var checkBoxLabels = document.querySelectorAll(".b-checkbox-container__label");
+    var checkBoxes = document.querySelectorAll(".b-form-input--check");
 
     var toggleCheckBoxFunction = function (e) {
         toggleCheckBox(e.srcElement);
@@ -24,8 +24,10 @@
         }
     };
 
-    Object.keys(checkBoxLabels).forEach(function (index) {
-        checkBoxLabels[index].addEventListener("click", toggleCheckBoxFunction);
-        checkBoxLabels[index].addEventListener("keypress", clickCheckBoxFunction);
+    Object.keys(checkBoxes).forEach(function (index) {
+        var checkBox = checkBoxes[index];
+        checkBox.style.outline = "none";
+        checkBox.addEventListener("click", toggleCheckBoxFunction);
+        checkBox.addEventListener("keypress", clickCheckBoxFunction);
     });
 }());
