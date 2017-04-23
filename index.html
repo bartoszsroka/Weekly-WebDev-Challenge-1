@@ -1,4 +1,3 @@
-<!--TODO: To delete: flexible, no-border, transparent, shadowed-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,35 +13,35 @@
 
 <body>
 <header>
-    <a href="http://masterlab.com" target="_blank">
-        <div class="b-logo b-logo--animated b-sprite b-sprite--logo-top"></div>
-    </a>
+    <!-- <a href="http://masterlab.com" target="_blank">
+         <div class="b-logo b-logo&#45;&#45;animated b-sprite b-sprite&#45;&#45;logo-top"></div>
+     </a>-->
 </header>
 
 <section class="b-section">
     <h1 class="b-heading">Register Form</h1>
     <div class="b-form-container b--rounded">
         <form class="b-form b--rounded">
-            <label class="b-form-item b-form-item--username b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Username"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--username b--rounded" type="text" required placeholder="Username"/>
             </label>
-            <label class="b-form-item b-form-item--password b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="password" required placeholder="Password"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--password b--rounded" type="password" required placeholder="Password"/>
             </label>
-            <label class="b-form-item b-form-item--password b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="password" required placeholder="Confirm Password"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--password b--rounded" type="password" required placeholder="Confirm Password"/>
             </label>
-            <label class="b-form-item b-form-item--email b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Email"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--email b--rounded" type="email" required placeholder="Email"/>
             </label>
-            <label class="b-form-item b-form-item--location b--rounded b--shadowed b--flexible">
-                <span class="b-sprite b-sprite--arrow b-form-input__arrow"></span>
-                <select class="b-form-input b-form-input--no-border b-form-input--multi-option b--transparent" required>
+            <label class="b-label">
+                <select class="b-form-input b-form-input--location b--rounded b-form-input--multi-option" required>
                     <option value="" disabled selected>Your Location</option>
                     <option>USA</option>
                     <option>Poland</option>
                     <option>Russia</option>
                 </select>
+                <span class="b-sprite b-sprite--arrow"></span>
             </label>
             <div tabindex="0" class="b-form-input--check" role="checkbox" aria-checked="true" aria-label="I have read and accept the terms of use.">
                 I have read and accept the terms of use.
@@ -58,13 +57,15 @@
     <h1 class="b-heading">Send Email</h1>
     <div class="b-form-container b--rounded">
         <form class="b-form b--rounded">
-            <label class="b-form-item b-form-item--username b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Your Name"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--username b--rounded" type="text" required placeholder="Your Name"/>
             </label>
-            <label class="b-form-item b-form-item--email b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Your Email"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--email b--rounded" type="email" required placeholder="Your Email"/>
             </label>
-            <textarea class="b-form-item b-form-input b-form-input--multiline b--rounded b--transparent b--shadowed" required placeholder="Type your message..."></textarea>
+            <label class="b-label b-label--multiline">
+                <textarea class="b-form-input b-form-input--multiline b--rounded" required placeholder="Type your message..."></textarea>
+            </label>
             <div tabindex="0" class="b-form-input--check" role="checkbox" aria-checked="true" aria-label="Send a copy to my Email">
                 Send a copy to my Email
             </div>
@@ -79,11 +80,12 @@
     <h1 class="b-heading">Sign In Form</h1>
     <div class="b-form-container b--rounded">
         <form class="b-form b--rounded">
-            <label class="b-form-item b-form-item--username b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Username"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--username b--rounded" type="text" required placeholder="Username"/>
             </label>
-            <label class="b-form-item b-form-item--password b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="password" required placeholder="Password"/></label>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--password b--rounded" type="password" required placeholder="Password"/>
+            </label>
             <div tabindex="0" class="b-form-input--check" role="checkbox" aria-checked="true" aria-label="Remember me">
                 Remember me
             </div>
@@ -98,11 +100,11 @@
     <h1 class="b-heading">Recover Form</h1>
     <div class="b-form-container b--rounded">
         <form class="b-form b--rounded">
-            <label class="b-form-item b-form-item--email b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Enter your Email"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--email b--rounded" type="email" required placeholder="Enter your Email"/>
             </label>
-            <label class="b-form-item b-form-item--phone b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="text" required placeholder="Enter your Phone number"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--phone b--rounded" type="text" required placeholder="Enter your Phone number"/>
             </label>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-small b--rounded" value="Send">
@@ -116,8 +118,8 @@
     <h1 class="b-heading">Subscribe Form</h1>
     <div class="b-form-container b--rounded">
         <form class="b-form b--rounded">
-            <label class="b-form-item b-form-item--email b--rounded b--shadowed b--flexible">
-                <input class="b-form-input b-form-input--no-border b--transparent" type="email" required placeholder="Enter your Email"/>
+            <label class="b-label">
+                <input class="b-form-input b-form-input--email b--rounded" type="email" required placeholder="Enter your Email"/>
             </label>
             <span>
                 <input type="submit" class="b-button b-button--submit b-button--size-small b--rounded" value="Subscribe">
@@ -128,9 +130,9 @@
 </section>
 
 <footer>
-    <a href="http://masterlab.com" target="_blank">
-        <div class="b-logo b-logo--animated b-sprite b-sprite--logo-bottom"></div>
-    </a>
+     <!--<a href="http://masterlab.com" target="_blank">
+         <div class="b-logo b-logo&#45;&#45;animated b-sprite b-sprite&#45;&#45;logo-bottom"></div>
+     </a>-->
 </footer>
 
 <!-- inject:js -->

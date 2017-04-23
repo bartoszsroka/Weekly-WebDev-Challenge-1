@@ -1,3 +1,25 @@
+body {
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #AFAFAF;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    min-width: 250px;
+    padding: 0;
+}
+
+.b-heading {
+    color: #FFFFFF;
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    text-shadow: 2px 3px 3px rgba(30, 30, 30, 0.8);
+}
+
 .b-section {
     clear: both;
     margin: auto;
@@ -18,26 +40,25 @@
     padding: 10px;
 }
 
-.b-form-item {
-    border: 1px solid #808080;
-    border: 1px solid rgba(195, 195, 195, 0.8);
-    margin: 0;
-    margin-bottom: 10px;
-    position: relative;
+.b-sprite, .b-form-input {
+    background-image: url('./images/spritesheet.png');
+    background-repeat: no-repeat;
 }
 
 .b-form-input {
+    background-color: transparent;
+    border: 1px solid #808080;
+    border: 1px solid rgba(195, 195, 195, 0.8);
     box-sizing: border-box;
     color: inherit;
     font-family: inherit;
     font-size: inherit;
     height: 40px;
-    padding-left: 8px;
+    padding-left: 55px;
     width: 100%;
 }
 
-.b-form-input:focus,
-.b-checkbox-container__control:focus {
+.b-form-input:focus, .b-checkbox-container__control:focus {
     -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
@@ -48,39 +69,20 @@
     outline-width: 0;
 }
 
-.b-form-input__arrow {
-    opacity: 1;
-    position: absolute;
-    right: 5px;
-    top: calc(50% - 4px);
-}
-
-.b-form-input__icon {
-    left: 5px;
-    position: absolute;
-    top: calc(50% - 13px);
-}
-
-.b-form-input--no-border {
-    border: none;
-    margin-left: 46px;
-}
-
 .b-form-input--multiline {
+    background-image: none;
     box-sizing: border-box;
     height: 100px;
     overflow: auto;
     padding-left: 8px;
     padding-top: 10px;
     resize: vertical;
-    width: 100%;
 }
 
 .b-form-input--check {
     cursor: pointer;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 5px;
+    line-height: 20px;
+    margin-bottom: 10px;
     padding-left: 30px;
     position: relative;
 }
@@ -88,9 +90,6 @@
 .b-form-input--check::after {
     border: 1px solid #808080;
     border: 1px solid rgba(195, 195, 195, 0.8);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     box-sizing: border-box;
     content: '';
     display: inline-block;
@@ -98,8 +97,19 @@
     left: 0;
     margin-right: 10px;
     position: absolute;
-    top: calc(50% - 10px);
+    top: 0;
     width: 20px;
+}
+
+.b-form-input--check::after, .b-label {
+    box-shadow: inset 0 -20px 43px -40px #808080;
+    box-shadow: inset 0 -20px 43px -40px rgba(0, 0, 0, 0.75);
+}
+
+.b-form-input--check::after, .b--rounded {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .b-form-input--check:focus::after {
@@ -122,7 +132,7 @@
     height: 12px;
     left: 4px;
     position: absolute;
-    top: calc(50% - 6px);
+    top: 4px;
     width: 12px;
 }
 
@@ -136,6 +146,82 @@
     display: none;
 }
 
+.b-form-input--username {
+    background-position: -4px -271px;
+}
+
+.b-form-input--password {
+    background-position: -4px -159px;
+}
+
+.b-form-input--phone {
+    background-position: -4px -215px;
+}
+
+.b-form-input--location {
+    background-position: -4px -103px
+}
+
+.b-form-input--email {
+    background-position: -4px -47px;
+}
+
 ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
     color: inherit;
+}
+
+.b-sprite {
+    display: block;
+}
+
+.b-sprite--logo-top, .b-sprite--logo-bottom {
+    background-size: 100%;
+    margin: 10px auto auto;
+    width: 230px;
+}
+
+.b-sprite--logo-top {
+    background-position: -15px -493px;
+    height: 70px;
+}
+
+.b-sprite--logo-bottom {
+    background-position: -15px -333px;
+    height: 75px;
+}
+
+.b-sprite--arrow {
+    background-position: -15px -15px;
+    height: 8px;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 4px);
+    width: 16px;
+}
+
+.b-label {
+    background-color: #F8F8F8;
+    display: block;
+    margin-bottom: 10px;
+    min-height: 40px;
+    position: relative;
+}
+
+.b-label::before {
+    border-right: 1px solid #808080;
+    border-right: 1px solid rgba(195, 195, 195, 0.8);
+    box-sizing: border-box;
+    content: '';
+    height: 30px;
+    left: 46px;
+    position: absolute;
+    top: 5px;
+    width: 1px;
+}
+
+.b-label--multiline::before {
+    border: none;
+    content: '';
+    height: 0;
+    width: 0;
 }
