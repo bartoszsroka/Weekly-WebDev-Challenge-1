@@ -41,7 +41,7 @@ body {
 }
 
 .b-sprite, .b-form-input {
-    background-image: url('./images/spritesheet.png');
+    background-image: url('./images/spritesheet-mobile.png');
     background-repeat: no-repeat;
 }
 
@@ -187,19 +187,19 @@ body {
 }
 
 .b-sprite--logo-top, .b-sprite--logo-bottom {
-    background-size: 100%;
-    margin: 10px auto auto;
-    width: 230px;
+    margin: 10px auto 10px auto;
 }
 
 .b-sprite--logo-top {
-    background-position: -15px -493px;
-    height: 70px;
+    background-position: -15px -440px;
+    height: 61px;
+    width: 230px;
 }
 
 .b-sprite--logo-bottom {
     background-position: -15px -333px;
-    height: 75px;
+    height: 79px;
+    width: 210px;
 }
 
 .b-sprite--arrow {
