@@ -19,6 +19,6 @@ var buildJs = function () {
 };
 
 module.exports = {
-	'buildCss': buildCss,
-	'buildJs': buildJs
+    'buildCss': buildCss,
+    'buildJs': buildJs
 }

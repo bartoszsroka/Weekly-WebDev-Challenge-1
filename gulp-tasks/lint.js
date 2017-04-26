@@ -3,7 +3,7 @@ const htmllint = require('gulp-htmllint')
 const csslint = require('gulp-csslint');
 const jslint = require('gulp-jslint');
 
-function lintHtml (){
+function lintHtml() {
     var options = {
         config: "htmllint.json"
     };
@@ -13,7 +13,7 @@ function lintHtml (){
 
 function htmllintReporter(filepath, issues) {
     if (issues.length > 0) {
-        issues.forEach(function(issue) {
+        issues.forEach(function (issue) {
             gutil.log(gutil.colors.cyan('[gulp-htmllint] ') +
                 gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') +
                 gutil.colors.red('(' + issue.code + ') ' + issue.msg));
@@ -23,7 +23,7 @@ function htmllintReporter(filepath, issues) {
     }
 }
 
-function lintCss(){
+function lintCss() {
     gulp.src('styles/*.css')
         .pipe(csslint({
             "box-sizing": false
@@ -31,7 +31,7 @@ function lintCss(){
         .pipe(csslint.formatter());
 }
 
-function lintJs(){
+function lintJs() {
     var options = {
         'global': ['document'],
         'for': true

@@ -17,8 +17,9 @@ gulp.task('lint', ['lintJs', 'lintCss', 'lintHtml']);
 
 gulp.task('formatCss', format.formatCss);
 gulp.task('formatJs', format.formatJs);
+gulp.task('formatGulpTasks', format.formatGulpTasks);
 gulp.task('formatHtml', format.formatHtml);
-gulp.task('format', ['formatCss', 'formatJs', 'formatHtml']);
+gulp.task('format', ['formatCss', 'formatJs', 'formatGulpTasks', 'formatHtml']);
 
 gulp.task('buildCss', ['clean'], build.buildCss);
 gulp.task('buildJs', ['clean'], build.buildJs);

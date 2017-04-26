@@ -2,15 +2,15 @@ const gulp = require('gulp');
 const del = require('del');
 const paths = require('./paths.js');
 
-var cleanBuildDir = function(){
-	return del(paths.buildDir);
+var cleanBuildDir = function () {
+    return del(paths.buildDir);
 };
 
-var cleanBuildJsDir = function(){
+var cleanBuildJsDir = function () {
     return del(paths.buildDir + '/scripts/');
 };
 
-var cleanBuildCssDir = function(){
+var cleanBuildCssDir = function () {
     return del(paths.buildDir + '/styles/');
 };
 

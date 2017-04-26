@@ -4,17 +4,17 @@ const imagemin = require('gulp-imagemin');
 const paths = require('./paths.js');
 
 var copyImages = function () {
-   return gulp.src('./images/**')
-       .pipe(imagemin([
-           imagemin.gifsicle({
-               interlaced: true
-           }), imagemin.jpegtran({
-               progressive: true
-           }), imagemin.optipng({
-               optimizationLevel: 5
-           })
-       ]))
-       .pipe(gulp.dest(paths.buildDir + '/images'));
+    return gulp.src('./images/**')
+        .pipe(imagemin([
+            imagemin.gifsicle({
+                interlaced: true
+            }), imagemin.jpegtran({
+                progressive: true
+            }), imagemin.optipng({
+                optimizationLevel: 5
+            })
+        ]))
+        .pipe(gulp.dest(paths.buildDir + '/images'));
 };
 
 var copyHtml = function () {
@@ -23,7 +23,6 @@ var copyHtml = function () {
 };
 
 module.exports = {
-	'copyImages': copyImages,
+    'copyImages': copyImages,
     'copyHtml': copyHtml
 };
-
