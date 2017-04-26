@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const cssbeautify = require('gulp-cssbeautify');
 const jsbeautify = require('gulp-jsbeautify');
-const htmlbeautify = require('gulp-html-prettify');
+const htmlbeautify = require('gulp-html-beautify');
 
 function formatCss() {
     return gulp.src('styles/*.css')
