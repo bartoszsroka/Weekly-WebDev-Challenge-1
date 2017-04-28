@@ -30,9 +30,6 @@ gulp.task('copyHtml', ['clean'], copy.copyHtml);
 gulp.task('copy', ['copyImages', 'copyHtml']);
 
 gulp.task('inject', ['copy', 'build'], inject.inject);
-gulp.task('rebuildProd', ['inject'], function(){
-    clean.cleanJs();
-    clean.cleanCss();
-});
+gulp.task('rebuildProd', ['inject'], clean.cleanTempFiles);
 
 gulp.task('default', ['rebuildProd']);

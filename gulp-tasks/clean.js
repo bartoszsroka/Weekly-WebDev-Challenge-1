@@ -6,16 +6,15 @@ var cleanBuildDir = function () {
     return del(paths.buildDir);
 };
 
-var cleanBuildJsDir = function () {
-    return del(paths.buildDir + '/scripts/');
-};
-
-var cleanBuildCssDir = function () {
-    return del(paths.buildDir + '/styles/');
+var cleanTempFiles = function () {
+	var buildDir = paths.buildDir + '/';
+	var stylesDir = buildDir + 'styles/';
+	var scriptsDir = buildDir + 'scripts/';
+	var favicon = buildDir + 'images/favicon-encoded.txt';
+    return del([stylesDir, scriptsDir, favicon]);
 };
 
 module.exports = {
     'clean': cleanBuildDir,
-    'cleanJs': cleanBuildJsDir,
-    'cleanCss': cleanBuildCssDir
+    'cleanTempFiles': cleanTempFiles
 };
