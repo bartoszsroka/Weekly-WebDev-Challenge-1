@@ -1,7 +1,9 @@
+/* TODO: Use Autoprefixer */
+
 body {
     background-image: url("./images/background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     color: #AFAFAF;
     font-family: 'Titillium Web', sans-serif;
     font-size: 12px;
@@ -23,7 +25,8 @@ body {
 .b-section {
     clear: both;
     margin: auto;
-    max-width: 455px;
+    max-width: 420px;
+    width: 420px;
 }
 
 .b-form-container {
@@ -72,11 +75,11 @@ body {
 .b-form-input--multiline {
     background-image: none;
     box-sizing: border-box;
-    height: 100px;
+    height: 232px;
     overflow: auto;
     padding-left: 8px;
     padding-top: 10px;
-    resize: vertical;
+    resize: none;
 }
 
 .b-form-input--check {
@@ -236,4 +239,60 @@ body {
     content: '';
     height: 0;
     width: 0;
+}
+
+.b-logo {
+    opacity: 0.2;
+}
+
+.b-logo:hover {
+    opacity: 1;
+}
+
+.b-logo--animated {
+    transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
+}
+
+@media only screen and (min-width: 930px) {
+    .b-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 920px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 920px;
+    }
+
+    .b-container__item--footer {
+        margin-top: 50px;
+    }
+
+    .b-section {
+        margin: 0;
+    }
+
+    .b-sprite, .b-form-input {
+        background-image: url('./images/spritesheet.png');
+    }
+
+    .b-form-input--multiline {
+        background-image: none;
+    }
+
+    .b-sprite--logo-top {
+        background-position: -15px -493px;
+        height: 116px;
+        width: 434px;
+    }
+
+    .b-sprite--logo-bottom {
+        background-position: -15px -333px;
+        height: 130px;
+        width: 353px;
+    }
 }

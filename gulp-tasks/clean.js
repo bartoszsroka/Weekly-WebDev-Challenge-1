@@ -7,10 +7,10 @@ var cleanBuildDir = function () {
 };
 
 var cleanTempFiles = function () {
-	var buildDir = paths.buildDir + '/';
-	var stylesDir = buildDir + 'styles/';
-	var scriptsDir = buildDir + 'scripts/';
-	var favicon = buildDir + 'images/favicon-encoded.txt';
+    var buildDir = paths.buildDir + '/';
+    var stylesDir = buildDir + 'styles/';
+    var scriptsDir = buildDir + 'scripts/';
+    var favicon = buildDir + 'images/favicon-encoded.txt';
     return del([stylesDir, scriptsDir, favicon]);
 };
 
