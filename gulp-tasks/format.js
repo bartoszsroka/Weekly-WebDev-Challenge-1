@@ -1,18 +1,23 @@
 const gulp = require('gulp');
 const cssbeautify = require('gulp-cssbeautify');
+const gulpPostcss = require('gulp-postcss');
+const cssdeclsort = require('css-declaration-sorter');
 const jsbeautify = require('gulp-jsbeautify');
 const htmlbeautify = require('gulp-html-beautify');
 
 function formatCss() {
     return gulp.src('styles/*.css')
         .pipe(cssbeautify())
+        .pipe(gulpPostcss([cssdeclsort({
+            'order': 'alphabetically'
+        })]))
         .pipe(gulp.dest('./styles/'));
 };
 
 function formatJs(source, target) {
     return gulp.src(source)
         .pipe(jsbeautify({
-            "space_after_anon_function": true
+            'space_after_anon_function': true
         }))
         .pipe(gulp.dest(target));
 };

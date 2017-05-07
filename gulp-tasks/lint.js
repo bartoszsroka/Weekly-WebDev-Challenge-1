@@ -5,7 +5,7 @@ const jslint = require('gulp-jslint');
 
 function lintHtml() {
     var options = {
-        config: "htmllint.json"
+        config: 'htmllint.json'
     };
     return gulp.src('index.html')
         .pipe(htmllint(options, htmllintReporter));
@@ -26,7 +26,8 @@ function htmllintReporter(filepath, issues) {
 function lintCss() {
     gulp.src('styles/*.css')
         .pipe(csslint({
-            "box-sizing": false
+            'box-sizing': false,
+            'order-alphabetical': false
         }))
         .pipe(csslint.formatter());
 }

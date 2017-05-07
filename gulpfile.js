@@ -7,8 +7,11 @@ const copy = require('./gulp-tasks/copy.js');
 const inject = require('./gulp-tasks/inject.js');
 const paths = require('./gulp-tasks/paths.js');
 const clean = require('./gulp-tasks/clean.js');
+const prefix = require('./gulp-tasks/autoprefix.js');
 
 gulp.task('clean', clean.clean);
+
+gulp.task('prefix', prefix.prefixStyles);
 
 gulp.task('lintJs', lint.lintJs);
 gulp.task('lintCss', lint.lintCss);
