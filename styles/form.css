@@ -24,7 +24,6 @@ body {
     clear: both;
     margin: auto;
     max-width: 420px;
-    width: 420px;
 }
 
 .b-form-container {
@@ -258,6 +257,7 @@ body {
 
     .b-section {
         margin: 0;
+        width: 420px;
     }
 
     .b-sprite, .b-form-input {
